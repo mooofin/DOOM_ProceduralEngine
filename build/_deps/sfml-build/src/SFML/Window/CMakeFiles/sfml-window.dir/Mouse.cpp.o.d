@@ -1,0 +1,27 @@
+_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.o: \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/src/SFML/Window/Mouse.cpp \
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/stdc-predef.h \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/src/SFML/Window/InputImpl.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Config.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/Keyboard.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/Mouse.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Vector2.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Angle.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Angle.inl \
+ /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/cassert \
+ /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/c++config.h \
+ /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/os_defines.h \
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/features.h \
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/features-time64.h \
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/wordsize.h \
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/timesize.h \
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/sys/cdefs.h \
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/long-double.h \
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/gnu/stubs.h \
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/gnu/stubs-64.h \
+ /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/cpu_defines.h \
+ /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/pstl/pstl_config.h \
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/assert.h \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Vector2.inl
