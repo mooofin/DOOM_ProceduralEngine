@@ -46,6 +46,10 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "devel" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE STATIC_LIBRARY FILES "/home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-build/lib/libsfml-window.a")
 endif()
 
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/pkgconfig" TYPE FILE FILES "/home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-build/src/SFML/Window/tools/pkg-config/sfml-window.pc")
+endif()
+
 if(CMAKE_INSTALL_COMPONENT STREQUAL "devel" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/SFML" TYPE FILE FILES "/home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-build/src/SFML/Window/SFMLWindowDependencies.cmake")
 endif()
