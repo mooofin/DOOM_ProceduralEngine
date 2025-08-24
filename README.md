@@ -1,101 +1,177 @@
-# CMake SFML Project Template
+# 2D Procedural Top-Down Shooter
 
-This repository template should allow for a fast and hassle-free kick start of your next SFML project using CMake.
-Thanks to [GitHub's nature of templates](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template), you can fork this repository without inheriting its Git history.
+A simple yet feature-rich 2D top-down shooter built in C++17 with the SFML 3.0 library. This project serves as a practical demonstration of procedural world generation, sprite-based entity management, dynamic enemy spawning, and a complete game loop with scoring and audio.
+---
 
-The template starts out very basic, but might receive additional features over time:
+## Table of Contents
 
-- Basic CMake script to build your project and link SFML on any operating system
-- Basic [GitHub Actions](https://github.com/features/actions) script for all major platforms
+1.  [Key Features](#key-features)
+2.  [System Architecture](#system-architecture)
+    - [Core Technologies](#core-technologies)
+    - [World Generation: Cellular Automata](#world-generation-cellular-automata)
+    - [Game Loop & State Management](#game-loop--state-management)
+    - [Entity Management](#entity-management)
+    - [Rendering Pipeline](#rendering-pipeline)
+3.  [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Asset Setup (Crucial Step)](#asset-setup-crucial-step)
+    - [Build Instructions](#build-instructions)
+4.  [How to Play](#how-to-play)
+    - [Objective](#objective)
+    - [Controls](#controls)
+5.  [Project File Structure](#project-file-structure)
+6.  [Future Improvements](#future-improvements)
 
-## How to Use
+## Key Features
 
-1. Install [Git](https://git-scm.com/downloads) and [CMake](https://cmake.org/download/). Use your system's package manager if available.
-2. Follow [GitHub's instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) for how to use their project template feature to create your own project. If you don't want to use GitHub, see the section below.
-3. Clone your new GitHub repo and open the repo in your text editor of choice.
-4. Open [CMakeLists.txt](CMakeLists.txt). Rename the project and the target name of the executable to whatever name you want. Make sure to change all occurrences.
-5. If you want to add or remove any .cpp files, change the source files listed in the `add_executable` call in CMakeLists.txt to match the source files your project requires. If you plan on keeping the default main.cpp file then no changes are required.
-6. If your code uses the Audio or Network modules then add `SFML::Audio` or `SFML::Network` to the `target_link_libraries` call alongside the existing `SFML::Graphics` library that is being linked.
-7. If you use Linux, install SFML's dependencies using your system package manager. On Ubuntu and other Debian-based distributions you can use the following commands:
-   ```
-   sudo apt update
-   sudo apt install \
-       libxrandr-dev \
-       libxcursor-dev \
-       libxi-dev \
-       libudev-dev \
-       libfreetype-dev \
-       libflac-dev \
-       libvorbis-dev \
-       libgl1-mesa-dev \
-       libegl1-mesa-dev \
-       libfreetype-dev
-   ```
-8. Configure and build your project. Most popular IDEs support CMake projects with very little effort on your part.
+-   **Infinite, Unique Levels:** The world is procedurally generated at runtime using a Cellular Automata algorithm, creating organic, cave-like structures for a new experience every time.
+-   **Dynamic Combat:** Face off against a horde of enemies that spawn dynamically over time.
+-   **Sprite-Based Graphics:** All game objects—player, enemies, and bullets—are represented by sprites, moving from a geometric prototype to a visually appealing game.
+-   **Complete Game Loop:** The game features a full play cycle, from starting the game to a "Game Over" screen that displays your final score.
+-   **Scoring System:** Earn points for every enemy you destroy and fight for a high score.
+-   **Atmospheric Audio:** A looping background music track sets the mood for the action.
+-   **Dynamic Camera:** A smooth `sf::View` follows the player's movement, keeping the action centered on-screen.
 
-   - [VS Code](https://code.visualstudio.com) via the [CMake extension](https://code.visualstudio.com/docs/cpp/cmake-linux)
-   - [Visual Studio](https://docs.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170)
-   - [CLion](https://www.jetbrains.com/clion/features/cmake-support.html)
-   - [Qt Creator](https://doc.qt.io/qtcreator/creator-project-cmake.html)
+## System Architecture
 
-   Using CMake from the command line is straightforward as well.
-   Be sure to run these commands in the root directory of the project you just created.
+This project is built as a single-file application for simplicity, but it follows several important architectural patterns.
 
-   ```
-   cmake -B build
-   cmake --build build
-   ```
+### Core Technologies
 
-9. Enjoy!
+-   **Language:** C++17
+-   **Graphics & Audio:** [SFML 3.0](https://www.sfml-dev.org/)
+-   **Build System:** [CMake](https://cmake.org/)
 
-## Upgrading SFML
+### World Generation: Cellular Automata
 
-SFML is found via CMake's [FetchContent](https://cmake.org/cmake/help/latest/module/FetchContent.html) module.
-FetchContent automatically downloads SFML from GitHub and builds it alongside your own code.
-Beyond the convenience of not having to install SFML yourself, this ensures ABI compatibility and simplifies things like specifying static versus shared libraries.
+Instead of a simple random walk, the map is generated using a more robust Cellular Automata algorithm, which creates more natural and complex environments. The process works in two phases:
 
-Modifying what version of SFML you want is as easy as changing the `GIT_TAG` argument.
-Currently it uses SFML 3 via the `3.0.0` tag.
+1.  **Random Noise Pass:** The world grid is filled with a random pattern of walls and floors based on a set probability. This creates a chaotic, noisy starting point.
+2.  **Smoothing/Simulation Pass:** The algorithm iterates through the map multiple times. In each pass, every tile checks its 8 neighbors. Based on a simple rule ("if a tile has more than 4 wall neighbors, it becomes a wall; otherwise, it becomes a floor"), the noise is smoothed out, allowing larger, organic cave structures and open areas to form.
 
-## But I want to...
+### Game Loop & State Management
 
-Modify CMake options by adding them as configuration parameters (with a `-D` flag) or by modifying the contents of CMakeCache.txt and rebuilding.
+The core of the application is a main `while (window.isOpen())` loop. To manage different phases of the game, a `GameState` enum is used:
 
-### Not use GitHub
+-   `GameState::Playing`: In this state, all game logic is active. The player can move and shoot, enemies spawn and move, and collision detection is performed.
+-   `GameState::GameOver`: Triggered when the player collides with an enemy. In this state, all game logic is paused. Only the Game Over UI is displayed, and the game waits for user input to close the window.
 
-You can use this project without a GitHub account by [downloading the contents](https://github.com/SFML/cmake-sfml-project/archive/refs/heads/master.zip) of the repository as a ZIP archive and unpacking it locally.
-This approach also avoids using Git entirely if you would prefer to not do that.
+### Entity Management
 
-### Change Compilers
+The game uses a simple, data-oriented approach for managing game objects. Each entity type is represented by a `struct` that contains its necessary data.
 
-See the variety of [`CMAKE_<LANG>_COMPILER`](https://cmake.org/cmake/help/latest/variable/CMAKE_LANG_COMPILER.html) options.
-In particular you'll want to modify `CMAKE_CXX_COMPILER` to point to the C++ compiler you wish to use.
+-   `Player`, `Enemy`, `Bullet`: These structs contain an `sf::Sprite` for visuals and an `sf::Vector2f` for velocity. This is a significant step up from the initial `sf::RectangleShape` prototypes.
+-   **Dynamic Vectors:** All active entities (enemies, bullets) are stored in `std::vector` containers. The game efficiently removes "dead" entities from these vectors using the `std::remove_if` algorithm.
 
-### Change Compiler Optimizations
+### Rendering Pipeline
 
-CMake abstracts away specific optimizer flags through the [`CMAKE_BUILD_TYPE`](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html) option.
-By default this project recommends `Release` builds which enable optimizations.
-Other build types include `Debug` builds which enable debug symbols but disable optimizations.
-If you're using a multi-configuration generator (as is often the case on Windows), you can modify the [`CMAKE_CONFIGURATION_TYPES`](https://cmake.org/cmake/help/latest/variable/CMAKE_CONFIGURATION_TYPES.html#variable:CMAKE_CONFIGURATION_TYPES) option.
+The rendering process is separated into two distinct layers to properly handle the game world and the user interface:
 
-### Change Generators
+1.  **World Rendering:** The game world (tiles, player, enemies, bullets) is drawn using a `sf::View` that acts as a camera. This view is centered on the player each frame, ensuring the player is always in the middle of the screen.
+2.  **UI Rendering:** After the world is drawn, the view is reset to the window's default view. The UI elements (Score, Game Over text) are then drawn on top. This guarantees that the UI remains fixed in place (e.g., in the top-left corner) regardless of where the player is in the world.
 
-While CMake will attempt to pick a suitable default generator, some systems offer a number of generators to choose from.
-Ubuntu, for example, offers Makefiles and Ninja as two potential options.
-For a list of generators, click [here](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html).
-To modify the generator you're using you must reconfigure your project providing a `-G` flag with a value corresponding to the generator you want.
-You can't simply modify an entry in the CMakeCache.txt file unlike the above options.
-Then you may rebuild your project with this new generator.
+## Getting Started
 
-## More Reading
+Follow these instructions to compile and run the project on your local machine.
 
-Here are some useful resources if you want to learn more about CMake:
+### Prerequisites
 
-- [Official CMake Tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/)
-- [How to Use CMake Without the Agonizing Pain - Part 1](https://alexreinking.com/blog/how-to-use-cmake-without-the-agonizing-pain-part-1.html)
-- [How to Use CMake Without the Agonizing Pain - Part 2](https://alexreinking.com/blog/how-to-use-cmake-without-the-agonizing-pain-part-2.html)
-- [Better CMake YouTube series by Jefferon Amstutz](https://www.youtube.com/playlist?list=PL8i3OhJb4FNV10aIZ8oF0AA46HgA2ed8g)
+-   A C++17 compliant compiler (e.g., GCC, Clang, MSVC).
+-   [CMake](https://cmake.org/download/) (version 3.10 or higher).
+-   [Git](https://git-scm.com/downloads).
+-   (For Linux/NixOS) `openalSoft` or your distribution's OpenAL equivalent, as it is a runtime dependency for SFML Audio.
 
-## License
+### Asset Setup (Crucial Step)
 
-The source code is dual licensed under Public Domain and MIT -- choose whichever you prefer.
+The game will not run without the necessary assets. You must create the following folder structure in the root of your project and populate it with your chosen files.
+
+```
+/YourProjectRoot/
+    └── res/
+        ├── arial.ttf           <-- A font file (or any .ttf)
+        ├── textures/
+        │   ├── player.png
+        │   ├── enemy.png
+        │   └── bullet.png
+        └── sfx/
+            └── music.ogg       <-- A looping music track
+```
+
+### Build Instructions
+
+1.  **Clone the repository:**
+    ```bash
+    git clone <your-repository-url>
+    cd <repository-name>
+    ```
+
+2.  **Create a build directory:**
+    ```bash
+    mkdir build
+    cd build
+    ```
+
+3.  **Configure the project with CMake:**
+    ```bash
+    cmake ..
+    ```
+
+4.  **Compile the project:**
+    ```bash
+    # On Linux or macOS
+    make
+
+    # On Windows with Visual Studio
+    cmake --build .
+    ```
+    This will create the executable in the `build/bin/` directory and automatically copy the `res` folder into the `build` directory.
+
+5.  **Run the game:**
+    ```bash
+    # From within the 'build' directory
+    ./bin/main
+    ```
+
+## How to Play
+
+### Objective
+
+Survive for as long as you can in the procedurally generated caves. Destroy enemies to increase your score and achieve a new high score! The game ends when you collide with an enemy.
+
+### Controls
+
+| Key     | Action          |
+| :------ | :-------------- |
+| **W**   | Move Up         |
+| **A**   | Move Left       |
+| **S**   | Move Down       |
+| **D**   | Move Right      |
+| **Space** | Shoot           |
+
+## Project File Structure
+
+```
+.
+├── CMakeLists.txt      # The main CMake build script
+├── shell.nix           # (Optional) Nix environment definition
+├── src/
+│   └── main.cpp        # All game logic is contained here
+└── res/
+    ├── arial.ttf       # Font for UI text
+    ├── textures/
+    │   ├── player.png
+    │   ├── enemy.png
+    │   └── bullet.png
+    └── sfx/
+        └── music.ogg
+```
+
+## Future Improvements
+
+This project provides a solid foundation. Here are some ideas for future expansion:
+
+-   **More Enemy Types:** Introduce enemies with different movement patterns (e.g., chasing, fleeing) or ranged attacks.
+-   **Player Health & Power-ups:** Implement a health system for the player and add collectible items like health packs, temporary invincibility, or weapon upgrades.
+-   **Sound Effects:** Add sound effects for shooting, enemy hits, and enemy destruction to make the gameplay more satisfying.
+-   **Game States:** Expand the state manager to include a Main Menu, a Pause screen, and a "You Win" condition.
+-   **Advanced Map Generation:** Enhance the Cellular Automata to generate more distinct features like large open rooms, connecting corridors, or different biomes.
