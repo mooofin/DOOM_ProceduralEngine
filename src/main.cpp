@@ -1,3 +1,12 @@
+/*
+Procedural Engine - Survival!
+- Generates a cave-like world using cellular automata
+- Player movement and shooting with bullets
+- Enemies that spawn and move randomly
+- Collision detection with walls, bullets, and enemies
+- Scoreboard system to track player score
+*/
+
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp> 
 #include <vector>
