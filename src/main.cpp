@@ -1,14 +1,5 @@
-/*
-Procedural Engine - Survival!
-- Generates a cave-like world using cellular automata
-- Player movement and shooting with bullets
-- Enemies that spawn and move randomly
-- Collision detection with walls, bullets, and enemies
-- Scoreboard system to track player score
-*/
-
 #include <SFML/Graphics.hpp>
-#include <SFML/Audio.hpp> 
+#include <SFML/Audio.hpp>
 #include <vector>
 #include <random>
 #include <ctime>
@@ -18,82 +9,38 @@ Procedural Engine - Survival!
 #include <string>
 #include <iostream>
 
-// Define our tile types for better clarity
-enum class TileType {
-    Floor,
-    Wall,
-    Water
-};
+// --- Game State & Entity Enums ---
+enum class GameState { Playing, GameOver };
+enum class TileType { Grass, Trees, Water };
 
-// --- Game Object Structs ---
-
+// --- Game Object Structs (with constructors) ---
 struct Player {
-    sf::RectangleShape shape;
+    sf::Sprite sprite;
+    // FIX: Changed '.' to '::' for namespace access
     sf::Vector2f velocity;
     sf::Vector2f facingDirection = {0, -1};
+    int health = 100;
+
+    Player(const sf::Texture& texture) : sprite(texture) {}
 };
 
 struct Bullet {
-    sf::RectangleShape shape;
+    sf::CircleShape shape;
     sf::Vector2f velocity;
 };
 
 struct Enemy {
-    sf::RectangleShape shape;
+    sf::Sprite sprite;
     sf::Vector2f velocity;
+
+    Enemy(const sf::Texture& texture) : sprite(texture) {}
 };
 
-// --- Helper Functions ---
 
-int countWallNeighbors(int x, int y, int width, int height, const std::vector<std::vector<TileType>>& grid) {
-    int wallCount = 0;
-    for (int neighborY = y - 1; neighborY <= y + 1; ++neighborY) {
-        for (int neighborX = x - 1; neighborX <= x + 1; ++neighborX) {
-            if (neighborX == x && neighborY == y) continue;
-            if (neighborX < 0 || neighborX >= width || neighborY < 0 || neighborY >= height || grid[neighborY][neighborX] == TileType::Wall) {
-                wallCount++;
-            }
-        }
-    }
-    return wallCount;
-}
-
-void generateWorld(int worldWidth, int worldHeight, float tileSize, std::vector<sf::RectangleShape>& tiles, std::vector<std::vector<TileType>>& grid) {
-    std::mt19937 rng(static_cast<unsigned int>(time(0)));
-    std::uniform_int_distribution<int> noiseDist(0, 100);
-    grid.assign(worldHeight, std::vector<TileType>(worldWidth, TileType::Wall));
-
-    int initialWallChance = 45;
-    for (int y = 0; y < worldHeight; ++y) for (int x = 0; x < worldWidth; ++x) if (noiseDist(rng) > initialWallChance) grid[y][x] = TileType::Floor;
-
-    int simulationSteps = 5;
-    for (int i = 0; i < simulationSteps; ++i) {
-        std::vector<std::vector<TileType>> nextGrid = grid;
-        for (int y = 0; y < worldHeight; ++y) for (int x = 0; x < worldWidth; ++x) {
-            int neighbors = countWallNeighbors(x, y, worldWidth, worldHeight, grid);
-            if (neighbors > 4) nextGrid[y][x] = TileType::Wall;
-            else if (neighbors < 4) nextGrid[y][x] = TileType::Floor;
-        }
-        grid = nextGrid;
-    }
-    
-    int waterChance = 5;
-    for (int y = 0; y < worldHeight; ++y) for (int x = 0; x < worldWidth; ++x) if (grid[y][x] == TileType::Floor && noiseDist(rng) < waterChance) grid[y][x] = TileType::Water;
-
-    tiles.clear();
-    for (int y = 0; y < worldHeight; ++y) {
-        for (int x = 0; x < worldWidth; ++x) {
-            sf::RectangleShape tileShape({tileSize, tileSize});
-            tileShape.setPosition({x * tileSize, y * tileSize});
-            switch (grid[y][x]) {
-                case TileType::Wall: tileShape.setFillColor(sf::Color(80, 80, 80)); break;
-                case TileType::Floor: tileShape.setFillColor(sf::Color(150, 120, 90)); break;
-                case TileType::Water: tileShape.setFillColor(sf::Color(50, 50, 200)); break;
-            }
-            tiles.push_back(tileShape);
-        }
-    }
-}
+// --- Helper Functions (Prototypes) ---
+sf::Vector2f findValidSpawn(int, int, float, const std::vector<std::vector<TileType>>&);
+void generateWorld(int, int, std::vector<std::vector<TileType>>&);
+int countTreeNeighbors(int, int, int, int, const std::vector<std::vector<TileType>>&);
 
 int main() {
     // --- Window and World Setup ---
@@ -101,196 +48,254 @@ int main() {
     const unsigned int WINDOW_HEIGHT = 720;
     const int WORLD_WIDTH = 100;
     const int WORLD_HEIGHT = 100;
-    const float TILE_SIZE = 32.0f;
+    const float SPRITE_SCALE = 2.0f; 
+    const float TILE_SIZE = 16.0f * SPRITE_SCALE; 
 
-    sf::RenderWindow window(sf::VideoMode({WINDOW_WIDTH, WINDOW_HEIGHT}), "Procedural Engine - Now with Music!");
+    sf::RenderWindow window(sf::VideoMode({WINDOW_WIDTH, WINDOW_HEIGHT}), "Procedural Adventure");
     window.setFramerateLimit(60);
 
-    // --- World Generation ---
-    std::vector<sf::RectangleShape> tiles;
+    // --- Asset Loading ---
+    sf::Font font;
+    if (!font.openFromFile("res/arial.ttf")) { std::cerr << "Could not load font\n"; return -1; }
+
+    sf::Texture playerTexture, enemyTexture, overworldTexture;
+    if (!playerTexture.loadFromFile("res/textures/character.png")) { std::cerr << "Could not load character.png\n"; return -1; }
+    if (!enemyTexture.loadFromFile("res/textures/npc.png")) { std::cerr << "Could not load npc.png\n"; return -1; }
+    if (!overworldTexture.loadFromFile("res/textures/overworld.png")) { std::cerr << "Could not load overworld.png\n"; return -1; }
+    
+    playerTexture.setSmooth(false);
+    enemyTexture.setSmooth(false);
+    overworldTexture.setSmooth(false);
+
+    // Using Vector2i for sf::IntRect constructors for SFML 3
+    sf::IntRect grassRect({0, 0}, {16, 16});
+    sf::IntRect treesRect({16 * 5, 0}, {16, 16});
+    sf::IntRect waterRect({16 * 10, 16 * 20}, {16, 16});
+
     std::vector<std::vector<TileType>> grid;
-    generateWorld(WORLD_WIDTH, WORLD_HEIGHT, TILE_SIZE, tiles, grid);
+    generateWorld(WORLD_WIDTH, WORLD_HEIGHT, grid);
+
+    sf::Music music;
+    if (!music.openFromFile("res/sfx/music.ogg")) { std::cerr << "Could not load music.ogg\n"; return -1; }
+    music.setVolume(50);
 
     // --- Player Setup ---
-    Player player;
-    player.shape.setSize({TILE_SIZE * 0.8f, TILE_SIZE * 0.8f});
-    player.shape.setFillColor(sf::Color::Cyan);
-    float playerSpeed = 200.0f;
-
-    for (int y = 0; y < WORLD_HEIGHT; ++y) for (int x = 0; x < WORLD_WIDTH; ++x) if (grid[y][x] == TileType::Floor) { player.shape.setPosition({x * TILE_SIZE, y * TILE_SIZE}); goto player_placed; }
-    player_placed:;
-
-    // --- Game Object Vectors & Shooting Variables ---
+    Player player(playerTexture); 
+    player.sprite.setScale({SPRITE_SCALE, SPRITE_SCALE});
+    player.sprite.setOrigin({playerTexture.getSize().x / 2.f, playerTexture.getSize().y / 2.f});
+    float playerSpeed = 150.0f;
+    
+    // --- Game Objects ---
     std::vector<Bullet> bullets;
     std::vector<Enemy> enemies;
-    float bulletSpeed = 400.0f;
-    sf::Clock shootClock;
-    const sf::Time shootCooldown = sf::seconds(0.3f);
-
-    // --- Enemy Spawner ---
-    sf::Clock enemySpawnClock;
-    const sf::Time enemySpawnCooldown = sf::seconds(3.0f);
-    const int maxEnemies = 15;
-    std::mt19937 rng(static_cast<unsigned int>(time(0)));
-    std::uniform_int_distribution<int> dirDist(0, 3);
-    float enemySpeed = 100.0f;
-
-    // --- Music Setup ---
-    sf::Music music;
-    if (!music.openFromFile("res/sfx/music.ogg")) {
-        std::cerr << "Error: Could not load music from res/sfx/music.ogg" << std::endl;
-        return -1;
-    }
-    music.setVolume(50);
-    music.play(); // Start the music once.
-
-    // --- Scoreboard Setup ---
+    float bulletSpeed = 300.0f;
+    GameState gameState = GameState::Playing;
     int score = 0;
-    sf::Font font;
-    if (!font.openFromFile("res/arial.ttf")) { std::cerr << "Error: Could not load font" << std::endl; return -1; }
+    sf::Clock shootClock, enemySpawnClock;
+    const sf::Time enemySpawnCooldown = sf::seconds(4.0f);
+    const int maxEnemies = 10;
+    
+    // --- UI Elements ---
     sf::Text scoreText(font, "Score: 0", 24);
-    scoreText.setPosition({10.f, 10.f});
+    sf::Text gameOverText(font, "GAME OVER", 96);
+    sf::Text finalScoreText(font);
+    sf::Text exitText(font, "Press any key to exit", 24);
+    sf::RectangleShape healthBarBack({150.f, 15.f});
+    sf::RectangleShape healthBarFront = healthBarBack;
+    healthBarBack.setFillColor(sf::Color(50,50,50,200));
+    healthBarFront.setFillColor(sf::Color::Red);
 
-    // --- View (Camera) Setup ---
-    sf::View view(sf::FloatRect({0.f, 0.f}, {static_cast<float>(WINDOW_WIDTH), static_cast<float>(WINDOW_HEIGHT)}));
+    auto resetGame = [&]() {
+        player.health = 100;
+        player.sprite.setPosition(findValidSpawn(WORLD_WIDTH, WORLD_HEIGHT, TILE_SIZE, grid));
+        enemies.clear();
+        bullets.clear();
+        score = 0;
+        shootClock.restart();
+        enemySpawnClock.restart();
+        music.play();
+    };
+    resetGame(); 
 
-    // --- Game Loop ---
+    sf::View view(sf::FloatRect({0.f, 0.f}, {(float)WINDOW_WIDTH, (float)WINDOW_HEIGHT}));
+
+    // --- Main Game Loop ---
     sf::Clock deltaClock;
     while (window.isOpen()) {
         float dt = deltaClock.restart().asSeconds();
 
-        // --- Event Handling ---
         while (const auto event = window.pollEvent()) {
             if (event->is<sf::Event::Closed>()) window.close();
-        }
-
-        // --- NEW: Manual music loop logic ---
-        // This is the workaround. We check if the music has stopped, and if so,
-        // we start it again from the beginning.
-        if (music.getStatus() == sf::SoundSource::Status::Stopped) {
-            music.play();
-        }
-
-        // --- Player Input and Movement ---
-        player.velocity = {0.f, 0.f};
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W)) player.velocity.y -= playerSpeed;
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S)) player.velocity.y += playerSpeed;
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A)) player.velocity.x -= playerSpeed;
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D)) player.velocity.x += playerSpeed;
-        
-        if (player.velocity.x != 0 || player.velocity.y != 0) {
-            float length = std::sqrt(player.velocity.x * player.velocity.x + player.velocity.y * player.velocity.y);
-            if (length > 0) player.facingDirection = {player.velocity.x / length, player.velocity.y / length};
-        }
-
-        // --- Shooting Input ---
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space) && shootClock.getElapsedTime() >= shootCooldown) {
-            Bullet newBullet;
-            newBullet.shape.setSize({TILE_SIZE * 0.3f, TILE_SIZE * 0.3f});
-            newBullet.shape.setFillColor(sf::Color::Yellow);
-            sf::Vector2f playerCenter = player.shape.getPosition() + player.shape.getSize() / 2.f;
-            newBullet.shape.setPosition(playerCenter - newBullet.shape.getSize() / 2.f); 
-            newBullet.velocity = player.facingDirection * bulletSpeed;
-            bullets.push_back(newBullet);
-            shootClock.restart();
-        }
-
-        // --- Enemy Spawning Logic ---
-        if (enemies.size() < maxEnemies && enemySpawnClock.getElapsedTime() >= enemySpawnCooldown) {
-            enemySpawnClock.restart();
-            while (true) {
-                int randX = std::uniform_int_distribution<int>(0, WORLD_WIDTH - 1)(rng);
-                int randY = std::uniform_int_distribution<int>(0, WORLD_HEIGHT - 1)(rng);
-                if (grid[randY][randX] == TileType::Floor) {
-                    Enemy enemy;
-                    enemy.shape.setSize({TILE_SIZE, TILE_SIZE});
-                    enemy.shape.setFillColor(sf::Color::Red);
-                    enemy.shape.setPosition({randX * TILE_SIZE, randY * TILE_SIZE});
-                    enemy.velocity = {0, enemySpeed};
-                    enemies.push_back(enemy);
-                    break;
-                }
-            }
-        }
-        
-        // --- Updates and Collision ---
-        sf::Vector2f lastGoodPosition = player.shape.getPosition();
-        player.shape.move(player.velocity * dt);
-        sf::FloatRect playerBounds = player.shape.getGlobalBounds();
-        int pStartX = std::max(0, static_cast<int>(playerBounds.position.x / TILE_SIZE));
-        int pEndX = std::min(WORLD_WIDTH - 1, static_cast<int>((playerBounds.position.x + playerBounds.size.x) / TILE_SIZE));
-        int pStartY = std::max(0, static_cast<int>(playerBounds.position.y / TILE_SIZE));
-        int pEndY = std::min(WORLD_HEIGHT - 1, static_cast<int>((playerBounds.position.y + playerBounds.size.y) / TILE_SIZE));
-
-        for (int y = pStartY; y <= pEndY; ++y) {
-            for (int x = pStartX; x <= pEndX; ++x) {
-                if (grid[y][x] != TileType::Floor) {
-                     sf::FloatRect wallBounds({x * TILE_SIZE, y * TILE_SIZE}, {TILE_SIZE, TILE_SIZE});
-                     if (playerBounds.findIntersection(wallBounds).has_value()) {
-                         player.shape.setPosition(lastGoodPosition);
-                     }
-                }
-            }
-        }
-        for (auto& bullet : bullets) bullet.shape.move(bullet.velocity * dt);
-        for (auto& enemy : enemies) {
-            sf::Vector2f enemyLastGoodPosition = enemy.shape.getPosition();
-            enemy.shape.move(enemy.velocity * dt);
-            sf::FloatRect enemyBounds = enemy.shape.getGlobalBounds();
-            int ex = static_cast<int>((enemyBounds.position.x + enemyBounds.size.x / 2) / TILE_SIZE);
-            int ey = static_cast<int>((enemyBounds.position.y + enemyBounds.size.y / 2) / TILE_SIZE);
-            if (ex < 0 || ex >= WORLD_WIDTH || ey < 0 || ey >= WORLD_HEIGHT || grid[ey][ex] != TileType::Floor) {
-                enemy.shape.setPosition(enemyLastGoodPosition);
-                int newDir = dirDist(rng);
-                if (newDir == 0) enemy.velocity = {0, -enemySpeed};
-                else if (newDir == 1) enemy.velocity = {0, enemySpeed};
-                else if (newDir == 2) enemy.velocity = {-enemySpeed, 0};
-                else enemy.velocity = {enemySpeed, 0};
-            }
-        }
-
-        bullets.erase(std::remove_if(bullets.begin(), bullets.end(), [&](Bullet& b) {
-            sf::FloatRect bulletBounds = b.shape.getGlobalBounds();
-            int bx = static_cast<int>(bulletBounds.position.x / TILE_SIZE);
-            int by = static_cast<int>(bulletBounds.position.y / TILE_SIZE);
-            if (bx < 0 || bx >= WORLD_WIDTH || by < 0 || by >= WORLD_HEIGHT || grid[by][bx] != TileType::Floor) return true;
-            for (auto& enemy : enemies) {
-                if (enemy.shape.getSize().x == 0) continue;
-                if (bulletBounds.findIntersection(enemy.shape.getGlobalBounds()).has_value()) {
-                    enemy.shape.setSize({0,0});
-                    score += 10;
-                    return true;
-                }
-            }
-            return false;
-        }), bullets.end());
-
-        enemies.erase(std::remove_if(enemies.begin(), enemies.end(), [](const Enemy& e){ return e.shape.getSize().x == 0; }), enemies.end());
-        
-        for (const auto& enemy : enemies) {
-            if (player.shape.getGlobalBounds().findIntersection(enemy.shape.getGlobalBounds()).has_value()) {
+            if (gameState == GameState::GameOver && event->is<sf::Event::KeyPressed>()) {
                 window.close();
             }
         }
 
-        // --- Update Score Text ---
-        scoreText.setString("Score: " + std::to_string(score));
+        if (music.getStatus() == sf::SoundSource::Status::Stopped) { music.play(); }
 
-        // --- View and Drawing ---
-        view.setCenter(player.shape.getPosition());
-        window.clear(sf::Color::Black);
-        
+        if (gameState == GameState::Playing) {
+            // --- Player Input ---
+            player.velocity = {0.f, 0.f};
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W)) player.velocity.y -= 1;
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S)) player.velocity.y += 1;
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A)) player.velocity.x -= 1;
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D)) player.velocity.x += 1;
+            
+            sf::Vector2f moveDir = {0.f, 0.f};
+            if(player.velocity.x != 0 || player.velocity.y != 0){
+                float length = std::sqrt(player.velocity.x * player.velocity.x + player.velocity.y * player.velocity.y);
+                moveDir = sf::Vector2f(player.velocity.x/length, player.velocity.y/length);
+                player.facingDirection = moveDir; 
+            }
+            player.sprite.move(moveDir * playerSpeed * dt);
+            
+            // --- Player Shooting ---
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space) && shootClock.getElapsedTime() >= sf::seconds(0.5f)) {
+                Bullet newBullet;
+                newBullet.shape.setRadius(6.f);
+                newBullet.shape.setFillColor(sf::Color(255, 255, 100, 200));
+                newBullet.shape.setOrigin({6.f, 6.f});
+                newBullet.shape.setPosition(player.sprite.getPosition());
+                newBullet.velocity = player.facingDirection * bulletSpeed;
+                bullets.push_back(newBullet);
+                shootClock.restart();
+            }
+            
+            // --- Enemy Spawning ---
+            if (enemies.size() < maxEnemies && enemySpawnClock.getElapsedTime() >= enemySpawnCooldown) {
+                enemySpawnClock.restart();
+                Enemy enemy(enemyTexture);
+                enemy.sprite.setScale({SPRITE_SCALE, SPRITE_SCALE});
+                enemy.sprite.setOrigin({enemyTexture.getSize().x/2.f, enemyTexture.getSize().y/2.f});
+                enemy.sprite.setPosition(findValidSpawn(WORLD_WIDTH, WORLD_HEIGHT, TILE_SIZE, grid));
+                enemies.push_back(enemy);
+            }
+
+            // --- Updates ---
+            for (auto& enemy : enemies) {
+                sf::Vector2f dirToPlayer = player.sprite.getPosition() - enemy.sprite.getPosition();
+                float dist = std::sqrt(dirToPlayer.x * dirToPlayer.x + dirToPlayer.y * dirToPlayer.y);
+                if (dist > 0) { 
+                    enemy.sprite.move({dirToPlayer.x/dist * 70.f * dt, dirToPlayer.y/dist * 70.f * dt});
+                }
+            }
+            for (auto& bullet : bullets) bullet.shape.move(bullet.velocity * dt);
+
+            // --- Collision Detection ---
+            bullets.erase(std::remove_if(bullets.begin(), bullets.end(), [&](Bullet& b) {
+                for (auto& enemy : enemies) {
+                    if (enemy.sprite.getScale().x > 0 && b.shape.getGlobalBounds().findIntersection(enemy.sprite.getGlobalBounds()).has_value()) {
+                        enemy.sprite.setScale({0,0});
+                        score += 10;
+                        return true;
+                    }
+                }
+                return false;
+            }), bullets.end());
+            enemies.erase(std::remove_if(enemies.begin(), enemies.end(), [](const Enemy& e){ return e.sprite.getScale().x == 0; }), enemies.end());
+
+            for (const auto& enemy : enemies) {
+                if (player.sprite.getGlobalBounds().findIntersection(enemy.sprite.getGlobalBounds()).has_value()) {
+                    player.health -= 25;
+                    if(player.health <= 0) {
+                        gameState = GameState::GameOver;
+                        music.stop();
+                        finalScoreText.setString("Final Score: " + std::to_string(score));
+                    }
+                }
+            }
+
+            scoreText.setString("Score: " + std::to_string(score));
+            healthBarFront.setSize({(float)player.health/100.f * 150.f, 15.f});
+        } // End of GameState::Playing
+
+        // --- Drawing ---
+        window.clear(sf::Color(116, 182, 53));
+        view.setCenter(player.sprite.getPosition());
         window.setView(view);
-        for (const auto& tile : tiles) window.draw(tile);
-        for (const auto& bullet : bullets) window.draw(bullet.shape);
-        for (const auto& enemy : enemies) window.draw(enemy.shape);
-        window.draw(player.shape);
-        
-        window.setView(window.getDefaultView());
-        window.draw(scoreText);
 
+        // Tilemap Rendering
+        sf::Sprite tileSprite(overworldTexture);
+        tileSprite.setScale({SPRITE_SCALE, SPRITE_SCALE});
+
+        int startX = std::max(0, (int)((view.getCenter().x - view.getSize().x / 2) / TILE_SIZE));
+        int endX = std::min(WORLD_WIDTH, (int)((view.getCenter().x + view.getSize().x / 2) / TILE_SIZE) + 2);
+        int startY = std::max(0, (int)((view.getCenter().y - view.getSize().y / 2) / TILE_SIZE));
+        int endY = std::min(WORLD_HEIGHT, (int)((view.getCenter().y + view.getSize().y / 2) / TILE_SIZE) + 2);
+
+        for (int y = startY; y < endY; ++y) {
+            for (int x = startX; x < endX; ++x) {
+                switch (grid[y][x]) {
+                    case TileType::Grass: tileSprite.setTextureRect(grassRect); break;
+                    case TileType::Trees: tileSprite.setTextureRect(treesRect); break;
+                    case TileType::Water: tileSprite.setTextureRect(waterRect); break;
+                }
+                tileSprite.setPosition({(float)x * TILE_SIZE, (float)y * TILE_SIZE});
+                window.draw(tileSprite);
+            }
+        }
+        
+        // Draw Game Objects
+        for (const auto& bullet : bullets) window.draw(bullet.shape);
+        for (const auto& enemy : enemies) window.draw(enemy.sprite);
+        window.draw(player.sprite);
+        
+        // Draw UI
+        window.setView(window.getDefaultView());
+        scoreText.setPosition({10, 10});
+        healthBarBack.setPosition({10, 40});
+        healthBarFront.setPosition({10, 40});
+        window.draw(scoreText);
+        window.draw(healthBarBack);
+        window.draw(healthBarFront);
+
+        if (gameState == GameState::GameOver) { /* ... Draw Game Over UI ... */ }
         window.display();
     }
-
     return 0;
+}
+
+
+// --- Full Function Implementations ---
+sf::Vector2f findValidSpawn(int worldWidth, int worldHeight, float tileSize, const std::vector<std::vector<TileType>>& grid){
+    std::mt19937 rng(static_cast<unsigned int>(time(0)));
+    while(true){
+        int x = std::uniform_int_distribution<int>(0, worldWidth - 1)(rng);
+        int y = std::uniform_int_distribution<int>(0, worldHeight - 1)(rng);
+        if(grid[y][x] == TileType::Grass){
+            // FIX: Use the 'tileSize' parameter, not the missing 'TILE_SIZE' constant
+            return {(float)x * tileSize + tileSize / 2, (float)y * tileSize + tileSize / 2};
+        }
+    }
+}
+void generateWorld(int worldWidth, int worldHeight, std::vector<std::vector<TileType>>& grid) {
+    std::mt19937 rng(static_cast<unsigned int>(time(0)));
+    std::uniform_int_distribution<int> noiseDist(0, 100);
+    grid.assign(worldHeight, std::vector<TileType>(worldWidth, TileType::Trees));
+
+    int initialTreeChance = 45;
+    for (int y = 0; y < worldHeight; ++y) for (int x = 0; x < worldWidth; ++x) if (noiseDist(rng) > initialTreeChance) grid[y][x] = TileType::Grass;
+
+    int simulationSteps = 5;
+    for (int i = 0; i < simulationSteps; ++i) {
+        std::vector<std::vector<TileType>> nextGrid = grid;
+        for (int y = 0; y < worldHeight; ++y) for (int x = 0; x < worldWidth; ++x) {
+            int neighbors = countTreeNeighbors(x, y, worldWidth, worldHeight, grid);
+            if (neighbors > 4) nextGrid[y][x] = TileType::Trees;
+            else if (neighbors < 4) nextGrid[y][x] = TileType::Grass;
+        }
+        grid = nextGrid;
+    }
+}
+int countTreeNeighbors(int x, int y, int width, int height, const std::vector<std::vector<TileType>>& grid) {
+    int treeCount = 0;
+    for (int ny = y - 1; ny <= y + 1; ++ny) {
+        for (int nx = x - 1; nx <= x + 1; ++nx) {
+            if (nx == x && ny == y) continue;
+            if (nx < 0 || nx >= width || ny < 0 || ny >= height || grid[ny][nx] == TileType::Trees) {
+                treeCount++;
+            }
+        }
+    }
+    return treeCount;
 }
