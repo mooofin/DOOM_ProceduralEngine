@@ -3,6 +3,25 @@
 
 CMakeFiles/main.dir/src/main.cpp.o
  /home/muffin/sid/projects/cmake-sfml-project/src/main.cpp
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio.hpp
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/AudioResource.hpp
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/Export.hpp
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/InputSoundFile.hpp
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/Listener.hpp
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/Music.hpp
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/OutputSoundFile.hpp
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/PlaybackDevice.hpp
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/Sound.hpp
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/SoundBuffer.hpp
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/SoundBufferRecorder.hpp
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/SoundChannel.hpp
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/SoundFileFactory.hpp
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/SoundFileFactory.inl
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/SoundFileReader.hpp
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/SoundFileWriter.hpp
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/SoundRecorder.hpp
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/SoundSource.hpp
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/SoundStream.hpp
  /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Config.hpp
  /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics.hpp
  /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/BlendMode.hpp
@@ -154,6 +173,7 @@ CMakeFiles/main.dir/src/main.cpp.o
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/specfun.h
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/sstream.tcc
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/std_abs.h
+ /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/std_function.h
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/stl_algo.h
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/stl_algobase.h
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/stl_bvector.h
@@ -178,6 +198,7 @@ CMakeFiles/main.dir/src/main.cpp.o
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/uniform_int_dist.h
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/unique_ptr.h
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/unordered_map.h
+ /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/unordered_set.h
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/uses_allocator.h
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/uses_allocator_args.h
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/utility.h
@@ -210,6 +231,7 @@ CMakeFiles/main.dir/src/main.cpp.o
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/ext/string_conversions.h
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/ext/type_traits.h
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/filesystem
+ /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/functional
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/initializer_list
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/iomanip
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/ios
@@ -253,6 +275,7 @@ CMakeFiles/main.dir/src/main.cpp.o
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/type_traits
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/typeinfo
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/unordered_map
+ /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/unordered_set
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/utility
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/variant
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/vector
@@ -302,13 +325,20 @@ CMakeFiles/main.dir/src/main.cpp.o
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/pthreadtypes-arch.h
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/pthreadtypes.h
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/sched.h
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/select-decl.h
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/select.h
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/select2.h
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/setjmp.h
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdint-intn.h
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdint-least.h
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdint-uintn.h
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdio.h
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdio2-decl.h
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdio2.h
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdio_lim.h
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdlib-bsearch.h
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdlib-float.h
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdlib.h
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/struct_mutex.h
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/struct_rwlock.h
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/thread-shared-types.h
@@ -346,6 +376,8 @@ CMakeFiles/main.dir/src/main.cpp.o
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/waitflags.h
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/waitstatus.h
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/wchar.h
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/wchar2-decl.h
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/wchar2.h
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/wctype-wchar.h
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/wordsize.h
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/ctype.h
@@ -400,6 +432,7 @@ bin/main
  /nix/store/g8zyryr9cr6540xsyg4avqkwgxpnwj2a-glibc-2.40-66/lib/libmvec.so.1
  /nix/store/g8zyryr9cr6540xsyg4avqkwgxpnwj2a-glibc-2.40-66/lib/libpthread.so.0
  /nix/store/g8zyryr9cr6540xsyg4avqkwgxpnwj2a-glibc-2.40-66/lib/librt.so
+ /nix/store/gcxyvf8cfa6c3csviqyxm90r2qwmbr4m-libogg-1.3.5/lib/libogg.so
  /nix/store/gshwzbmpd5nj1k0k2wz1xck36z6ih1bm-libpng-apng-1.6.46/lib/libpng16.so.16
  /nix/store/hdw0vmsxiwigbap45fzxb7biaf11fmwn-systemd-minimal-libs-257.7/lib/libudev.so
  /nix/store/hjcifdxmpzipdsmb6ailclf2dd4w3qcc-libXrender-0.9.12/lib/libXrender.so
@@ -408,13 +441,18 @@ bin/main
  /nix/store/hv3zdr3xrxlld11j5xkdlrdmcr5wn4n2-libXrandr-1.5.4/lib/libXrandr.so
  /nix/store/izls6k45hnixv7ydcfhjmjncbxbl7ihs-libXau-1.0.12/lib/libXau.so.6
  /nix/store/jpz08axa2929ja62a1gnv5f1iavkl8pn-libXfixes-6.0.1/lib/libXfixes.so
+ /nix/store/qark4rhxid3arhfzxk3k08xllzv7i5h3-flac-1.5.0/lib/libFLAC.so
  /nix/store/qbnwpvvwnxw73m0pbj20hkv9ypv3ncnq-libglvnd-1.7.0/lib/libGL.so
  /nix/store/qbnwpvvwnxw73m0pbj20hkv9ypv3ncnq-libglvnd-1.7.0/lib/libGLX.so.0
  /nix/store/qbnwpvvwnxw73m0pbj20hkv9ypv3ncnq-libglvnd-1.7.0/lib/libGLdispatch.so.0
  /nix/store/qv94wfmwj25z2i0sg7icq1zh3w3gdczv-freetype-2.13.3/lib/libfreetype.so
  /nix/store/rbmbqk2865y79ncrngf575a72dpjf8dy-libX11-1.8.12/lib/libX11.so
  /nix/store/s1339m275xr5hf1df5mgnwn8x8zhbbiq-libxcb-1.17.0/lib/libxcb.so.1
+ /nix/store/xp8d68mhgsnd2ln5l3n1ydjs2pcqxw8l-libvorbis-1.3.7/lib/libvorbis.so
+ /nix/store/xp8d68mhgsnd2ln5l3n1ydjs2pcqxw8l-libvorbis-1.3.7/lib/libvorbisenc.so
+ /nix/store/xp8d68mhgsnd2ln5l3n1ydjs2pcqxw8l-libvorbis-1.3.7/lib/libvorbisfile.so
  /home/muffin/sid/projects/cmake-sfml-project/build/CMakeFiles/main.dir/src/main.cpp.o
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-build/lib/libsfml-audio.a
  /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-build/lib/libsfml-graphics.a
  /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-build/lib/libsfml-system.a
  /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-build/lib/libsfml-window.a

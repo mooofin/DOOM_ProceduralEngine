@@ -137,6 +137,8 @@ CMakeFiles/main.dir/src/main.cpp.o: \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/types/FILE.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/types/locale_t.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/types/__locale_t.h \
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/wchar2-decl.h \
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/wchar2.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/shared_ptr_base.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/allocated_ptr.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/ext/aligned_buffer.h \
@@ -219,8 +221,12 @@ CMakeFiles/main.dir/src/main.cpp.o: \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/sys/select.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/select.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/types/sigset_t.h \
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/select2.h \
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/select-decl.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/alloca.h \
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdlib-bsearch.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdlib-float.h \
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdlib.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/std_abs.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/cstdio \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/stdio.h \
@@ -229,6 +235,9 @@ CMakeFiles/main.dir/src/main.cpp.o: \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/types/struct_FILE.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/types/cookie_io_functions_t.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdio_lim.h \
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdio2-decl.h \
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdio.h \
+ /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdio2.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/charconv.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/basic_string.tcc \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/chrono.h \
@@ -331,6 +340,29 @@ CMakeFiles/main.dir/src/main.cpp.o: \
  /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/InputStream.hpp \
  /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/MemoryInputStream.hpp \
  /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Sleep.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/InputSoundFile.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/Export.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/SoundFileReader.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/SoundChannel.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/Listener.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/Music.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/SoundStream.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/SoundSource.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/AudioResource.hpp \
+ /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/functional \
+ /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/std_function.h \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/OutputSoundFile.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/SoundFileWriter.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/PlaybackDevice.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/Sound.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/SoundBuffer.hpp \
+ /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/unordered_set \
+ /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/unordered_set.h \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/SoundBufferRecorder.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/SoundRecorder.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/SoundFileFactory.hpp \
+ /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/SoundFileFactory.inl \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/random \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/cmath \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/math.h \

@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp> 
 #include <vector>
 #include <random>
 #include <ctime>
@@ -54,24 +55,21 @@ void generateWorld(int worldWidth, int worldHeight, float tileSize, std::vector<
     grid.assign(worldHeight, std::vector<TileType>(worldWidth, TileType::Wall));
 
     int initialWallChance = 45;
-    for (int y = 0; y < worldHeight; ++y) {
-        for (int x = 0; x < worldWidth; ++x) {
-            if (noiseDist(rng) > initialWallChance) grid[y][x] = TileType::Floor;
-        }
-    }
+    for (int y = 0; y < worldHeight; ++y) for (int x = 0; x < worldWidth; ++x) if (noiseDist(rng) > initialWallChance) grid[y][x] = TileType::Floor;
 
     int simulationSteps = 5;
     for (int i = 0; i < simulationSteps; ++i) {
         std::vector<std::vector<TileType>> nextGrid = grid;
-        for (int y = 0; y < worldHeight; ++y) {
-            for (int x = 0; x < worldWidth; ++x) {
-                int neighbors = countWallNeighbors(x, y, worldWidth, worldHeight, grid);
-                if (neighbors > 4) nextGrid[y][x] = TileType::Wall;
-                else if (neighbors < 4) nextGrid[y][x] = TileType::Floor;
-            }
+        for (int y = 0; y < worldHeight; ++y) for (int x = 0; x < worldWidth; ++x) {
+            int neighbors = countWallNeighbors(x, y, worldWidth, worldHeight, grid);
+            if (neighbors > 4) nextGrid[y][x] = TileType::Wall;
+            else if (neighbors < 4) nextGrid[y][x] = TileType::Floor;
         }
         grid = nextGrid;
     }
+    
+    int waterChance = 5;
+    for (int y = 0; y < worldHeight; ++y) for (int x = 0; x < worldWidth; ++x) if (grid[y][x] == TileType::Floor && noiseDist(rng) < waterChance) grid[y][x] = TileType::Water;
 
     tiles.clear();
     for (int y = 0; y < worldHeight; ++y) {
@@ -96,7 +94,7 @@ int main() {
     const int WORLD_HEIGHT = 100;
     const float TILE_SIZE = 32.0f;
 
-    sf::RenderWindow window(sf::VideoMode({WINDOW_WIDTH, WINDOW_HEIGHT}), "Procedural Engine - Survival!");
+    sf::RenderWindow window(sf::VideoMode({WINDOW_WIDTH, WINDOW_HEIGHT}), "Procedural Engine - Now with Music!");
     window.setFramerateLimit(60);
 
     // --- World Generation ---
@@ -110,14 +108,7 @@ int main() {
     player.shape.setFillColor(sf::Color::Cyan);
     float playerSpeed = 200.0f;
 
-    for (int y = 0; y < WORLD_HEIGHT; ++y) {
-        for (int x = 0; x < WORLD_WIDTH; ++x) {
-            if (grid[y][x] == TileType::Floor) {
-                player.shape.setPosition({x * TILE_SIZE, y * TILE_SIZE});
-                goto player_placed;
-            }
-        }
-    }
+    for (int y = 0; y < WORLD_HEIGHT; ++y) for (int x = 0; x < WORLD_WIDTH; ++x) if (grid[y][x] == TileType::Floor) { player.shape.setPosition({x * TILE_SIZE, y * TILE_SIZE}); goto player_placed; }
     player_placed:;
 
     // --- Game Object Vectors & Shooting Variables ---
@@ -134,24 +125,22 @@ int main() {
     std::mt19937 rng(static_cast<unsigned int>(time(0)));
     std::uniform_int_distribution<int> dirDist(0, 3);
     float enemySpeed = 100.0f;
-    
+
+    // --- Music Setup ---
+    sf::Music music;
+    if (!music.openFromFile("res/sfx/music.ogg")) {
+        std::cerr << "Error: Could not load music from res/sfx/music.ogg" << std::endl;
+        return -1;
+    }
+    music.setVolume(50);
+    music.play(); // Start the music once.
+
     // --- Scoreboard Setup ---
     int score = 0;
     sf::Font font;
-    // SFML 3 FIX: Use openFromFile instead of loadFromFile
-    if (!font.openFromFile("res/arial.ttf")) {
-        std::cerr << "Error: Could not load font from res/arial.ttf" << std::endl;
-        return -1;
-    }
-    
-    // SFML 3 FIX: sf::Text must be initialized with a font
-    sf::Text scoreText(font);
-    scoreText.setString("Score: 0");
-    scoreText.setCharacterSize(24);
-    scoreText.setFillColor(sf::Color::White);
-    // SFML 3 FIX: setPosition now takes a Vector2f
+    if (!font.openFromFile("res/arial.ttf")) { std::cerr << "Error: Could not load font" << std::endl; return -1; }
+    sf::Text scoreText(font, "Score: 0", 24);
     scoreText.setPosition({10.f, 10.f});
-
 
     // --- View (Camera) Setup ---
     sf::View view(sf::FloatRect({0.f, 0.f}, {static_cast<float>(WINDOW_WIDTH), static_cast<float>(WINDOW_HEIGHT)}));
@@ -159,12 +148,19 @@ int main() {
     // --- Game Loop ---
     sf::Clock deltaClock;
     while (window.isOpen()) {
+        float dt = deltaClock.restart().asSeconds();
+
         // --- Event Handling ---
         while (const auto event = window.pollEvent()) {
             if (event->is<sf::Event::Closed>()) window.close();
         }
 
-        float dt = deltaClock.restart().asSeconds();
+        // --- NEW: Manual music loop logic ---
+        // This is the workaround. We check if the music has stopped, and if so,
+        // we start it again from the beginning.
+        if (music.getStatus() == sf::SoundSource::Status::Stopped) {
+            music.play();
+        }
 
         // --- Player Input and Movement ---
         player.velocity = {0.f, 0.f};
@@ -208,9 +204,7 @@ int main() {
             }
         }
         
-        // --- Updates ---
-
-        // Move player and check wall collision
+        // --- Updates and Collision ---
         sf::Vector2f lastGoodPosition = player.shape.getPosition();
         player.shape.move(player.velocity * dt);
         sf::FloatRect playerBounds = player.shape.getGlobalBounds();
@@ -229,18 +223,13 @@ int main() {
                 }
             }
         }
-
-        // Update Bullets
         for (auto& bullet : bullets) bullet.shape.move(bullet.velocity * dt);
-
-        // Update Enemies
         for (auto& enemy : enemies) {
             sf::Vector2f enemyLastGoodPosition = enemy.shape.getPosition();
             enemy.shape.move(enemy.velocity * dt);
             sf::FloatRect enemyBounds = enemy.shape.getGlobalBounds();
             int ex = static_cast<int>((enemyBounds.position.x + enemyBounds.size.x / 2) / TILE_SIZE);
             int ey = static_cast<int>((enemyBounds.position.y + enemyBounds.size.y / 2) / TILE_SIZE);
-
             if (ex < 0 || ex >= WORLD_WIDTH || ey < 0 || ey >= WORLD_HEIGHT || grid[ey][ex] != TileType::Floor) {
                 enemy.shape.setPosition(enemyLastGoodPosition);
                 int newDir = dirDist(rng);
@@ -251,17 +240,11 @@ int main() {
             }
         }
 
-        // --- Collision Detection ---
-        
         bullets.erase(std::remove_if(bullets.begin(), bullets.end(), [&](Bullet& b) {
             sf::FloatRect bulletBounds = b.shape.getGlobalBounds();
             int bx = static_cast<int>(bulletBounds.position.x / TILE_SIZE);
             int by = static_cast<int>(bulletBounds.position.y / TILE_SIZE);
-
-            if (bx < 0 || bx >= WORLD_WIDTH || by < 0 || by >= WORLD_HEIGHT || grid[by][bx] != TileType::Floor) {
-                return true;
-            }
-
+            if (bx < 0 || bx >= WORLD_WIDTH || by < 0 || by >= WORLD_HEIGHT || grid[by][bx] != TileType::Floor) return true;
             for (auto& enemy : enemies) {
                 if (enemy.shape.getSize().x == 0) continue;
                 if (bulletBounds.findIntersection(enemy.shape.getGlobalBounds()).has_value()) {
@@ -273,9 +256,7 @@ int main() {
             return false;
         }), bullets.end());
 
-        enemies.erase(std::remove_if(enemies.begin(), enemies.end(), [](const Enemy& e){
-            return e.shape.getSize().x == 0;
-        }), enemies.end());
+        enemies.erase(std::remove_if(enemies.begin(), enemies.end(), [](const Enemy& e){ return e.shape.getSize().x == 0; }), enemies.end());
         
         for (const auto& enemy : enemies) {
             if (player.shape.getGlobalBounds().findIntersection(enemy.shape.getGlobalBounds()).has_value()) {
@@ -287,6 +268,7 @@ int main() {
         scoreText.setString("Score: " + std::to_string(score));
 
         // --- View and Drawing ---
+        view.setCenter(player.shape.getPosition());
         window.clear(sf::Color::Black);
         
         window.setView(view);

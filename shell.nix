@@ -22,5 +22,6 @@ mkShell rec {
     xorg.libXrandr
     xorg.libXrender
     xorg.xcbutilimage
+    pkgs.openalSoft
   ];
 }
