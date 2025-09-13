@@ -1,10 +1,10 @@
 _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.o: \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/src/SFML/Graphics/RenderWindow.cpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Graphics/RenderWindow.cpp \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/stdc-predef.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/src/SFML/Graphics/GLCheck.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Config.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/src/SFML/Graphics/GLExtensions.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/extlibs/headers/glad/include/glad/gl.h \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Graphics/GLCheck.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Config.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Graphics/GLExtensions.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/extlibs/headers/glad/include/glad/gl.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/lib/gcc/x86_64-unknown-linux-gnu/14.3.0/include/stdint.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/stdint.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/libc-header-start.h \
@@ -23,8 +23,8 @@ _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdint-intn.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdint-uintn.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdint-least.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Err.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Err.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Export.hpp \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/iosfwd \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/requires_hosted.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/c++config.h \
@@ -203,21 +203,21 @@ _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/locale_facets.tcc \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/basic_ios.tcc \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/ostream.tcc \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Image.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Export.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Color.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Image.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Export.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Color.hpp \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/cstdint \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Color.inl \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Rect.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Vector2.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Angle.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Angle.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Color.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Rect.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Vector2.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Angle.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Angle.inl \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/cassert \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/assert.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Vector2.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Vector2.inl \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/optional \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/enable_special_members.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Rect.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Rect.inl \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/filesystem \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/fs_fwd.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/chrono.h \
@@ -254,10 +254,10 @@ _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/stl_vector.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/stl_bvector.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/vector.tcc \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/src/SFML/Graphics/RenderTextureImplFBO.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/src/SFML/Graphics/RenderTextureImpl.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/GlResource.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Graphics/RenderTextureImplFBO.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Graphics/RenderTextureImpl.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Window/GlResource.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/memory \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/stl_tempbuf.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/stl_raw_storage_iter.h \
@@ -274,45 +274,45 @@ _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/hashtable_policy.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/node_handle.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/erase_if.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/RenderWindow.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/RenderTarget.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/BlendMode.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/CoordinateType.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/PrimitiveType.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/RenderStates.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/StencilMode.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Transform.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/RenderWindow.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/RenderTarget.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/BlendMode.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/CoordinateType.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/PrimitiveType.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/RenderStates.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/StencilMode.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Transform.hpp \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/array \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/compare \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Transform.inl \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Vertex.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/View.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/ContextSettings.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/VideoMode.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/Window.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/WindowBase.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/Vulkan.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/WindowEnums.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/WindowHandle.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Time.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Transform.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Vertex.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/View.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Window/ContextSettings.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Window/VideoMode.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Window/Window.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Window/WindowBase.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Window/Vulkan.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Window/WindowEnums.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Window/WindowHandle.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Time.hpp \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/chrono \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Time.inl \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/WindowBase.inl \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/Event.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/Joystick.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/String.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Utf.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Utf.inl \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/String.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Time.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Window/WindowBase.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Window/Event.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Window/Joystick.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/String.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Utf.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Utf.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/String.inl \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/iterator \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/stream_iterator.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/Keyboard.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/Mouse.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/Sensor.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Vector3.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Vector3.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Window/Keyboard.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Window/Mouse.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Window/Sensor.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Vector3.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Vector3.inl \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/variant \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/Event.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Window/Event.inl \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/utility \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/stl_relops.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Clock.hpp
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Clock.hpp

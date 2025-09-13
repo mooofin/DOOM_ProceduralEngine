@@ -1,10 +1,10 @@
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o: \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/src/SFML/System/String.cpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/String.cpp \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/stdc-predef.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/String.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Export.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Config.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Utf.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/String.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Config.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Utf.hpp \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/array \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/compare \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/version.h \
@@ -208,8 +208,8 @@ _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o: \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/stdint.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdint-uintn.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdint-least.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Utf.inl \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/String.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Utf.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/String.inl \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/iterator \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/stream_iterator.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/utility \

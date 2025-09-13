@@ -1,13 +1,13 @@
 _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/JoystickImpl.cpp.o: \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/src/SFML/Window/Unix/JoystickImpl.cpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Window/Unix/JoystickImpl.cpp \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/stdc-predef.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/src/SFML/Window/JoystickImpl.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Config.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/Joystick.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/String.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Export.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Utf.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Window/JoystickImpl.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Config.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Window/Joystick.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/String.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Utf.hpp \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/array \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/compare \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/version.h \
@@ -211,14 +211,14 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/JoystickImpl.cp
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/stdint.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdint-uintn.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdint-least.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Utf.inl \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/String.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Utf.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/String.inl \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/iterator \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/stream_iterator.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/src/SFML/System/EnumArray.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/EnumArray.hpp \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/cassert \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/assert.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/src/SFML/Window/Unix/JoystickImpl.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Window/Unix/JoystickImpl.hpp \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/linux/input.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/sys/time.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/sys/ioctl.h \
@@ -242,7 +242,7 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/JoystickImpl.cp
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/asm/posix_types_64.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/asm-generic/posix_types.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/linux/input-event-codes.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Err.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Err.hpp \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/fcntl.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/fcntl.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/fcntl-linux.h \
@@ -251,7 +251,7 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/JoystickImpl.cp
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stat.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/struct_stat.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/fcntl2.h \
- /nix/store/mfsa7vg8jqfa0480liz5wagpzava1sd3-systemd-minimal-libs-257.7-dev/include/libudev.h \
+ /nix/store/3c5p78gnilzxjk9hdvpr1dm2m44wwajq-systemd-minimal-libs-257.8-dev/include/libudev.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/sys/sysmacros.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/sysmacros.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/linux/joystick.h \

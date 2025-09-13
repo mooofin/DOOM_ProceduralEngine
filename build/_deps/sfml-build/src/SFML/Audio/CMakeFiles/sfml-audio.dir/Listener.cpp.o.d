@@ -1,12 +1,12 @@
 _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.o: \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/src/SFML/Audio/Listener.cpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Audio/Listener.cpp \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/stdc-predef.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/src/SFML/Audio/AudioDevice.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/Listener.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Audio/Export.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Config.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Angle.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Angle.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Audio/AudioDevice.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Audio/Listener.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Audio/Export.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Config.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Angle.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Angle.inl \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/cassert \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/c++config.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/os_defines.h \
@@ -21,10 +21,10 @@ _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.o: \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/cpu_defines.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/pstl/pstl_config.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/assert.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Vector3.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Export.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Vector3.inl \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/extlibs/headers/miniaudio/miniaudio.h \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Vector3.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Vector3.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/extlibs/headers/miniaudio/miniaudio.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/lib/gcc/x86_64-unknown-linux-gnu/14.3.0/include/stddef.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/lib/gcc/x86_64-unknown-linux-gnu/14.3.0/include/stdint.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/stdint.h \

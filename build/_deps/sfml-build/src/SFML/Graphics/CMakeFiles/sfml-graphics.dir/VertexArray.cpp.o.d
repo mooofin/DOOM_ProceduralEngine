@@ -1,11 +1,11 @@
 _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.o: \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/src/SFML/Graphics/VertexArray.cpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Graphics/VertexArray.cpp \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/stdc-predef.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/RenderTarget.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Export.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Config.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/BlendMode.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Color.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/RenderTarget.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Export.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Config.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/BlendMode.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Color.hpp \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/cstdint \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/c++config.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/os_defines.h \
@@ -29,17 +29,17 @@ _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdint-intn.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdint-uintn.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/stdint-least.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Color.inl \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/CoordinateType.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/PrimitiveType.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Rect.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Vector2.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Export.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Angle.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Angle.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Color.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/CoordinateType.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/PrimitiveType.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Rect.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Vector2.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Angle.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Angle.inl \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/cassert \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/assert.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Vector2.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Vector2.inl \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/optional \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/version.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/type_traits \
@@ -63,10 +63,10 @@ _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/concept_check.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/debug/assertions.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/utility.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Rect.inl \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/RenderStates.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/StencilMode.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Transform.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Rect.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/RenderStates.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/StencilMode.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Transform.hpp \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/array \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/compare \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/functexcept.h \
@@ -82,12 +82,12 @@ _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bit \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/concepts \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/range_access.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Transform.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Transform.inl \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/cstddef \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Vertex.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/View.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/VertexArray.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Drawable.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Vertex.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/View.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/VertexArray.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Drawable.hpp \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/vector \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/requires_hosted.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/allocator.h \

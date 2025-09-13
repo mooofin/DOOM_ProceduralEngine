@@ -3,9 +3,9 @@
 # No other meaning or use of this file is supported.
 
 method=git
-command=/nix/store/xsmnansgqyw46gkxvxv5vx477i13lvgf-cmake-3.31.6/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitclone.cmake
-source_dir=/home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src
-work_dir=/home/muffin/sid/projects/cmake-sfml-project/build/_deps
+command=/nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitclone.cmake
+source_dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src
+work_dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps
 repository=https://github.com/SFML/SFML.git
 remote=origin
 init_submodules=TRUE

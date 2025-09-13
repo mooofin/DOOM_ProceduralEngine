@@ -1,4 +1,4 @@
-# Install script for directory: /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/src/SFML/System
+# Install script for directory: /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,20 +43,16 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "devel" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE STATIC_LIBRARY FILES "/home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-build/lib/libsfml-system.a")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/pkgconfig" TYPE FILE FILES "/home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-build/src/SFML/System/tools/pkg-config/sfml-system.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE STATIC_LIBRARY FILES "/home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/lib/libsfml-system.a")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "devel" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/SFML" TYPE FILE FILES "/home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-build/src/SFML/System/SFMLSystemDependencies.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/SFML" TYPE FILE FILES "/home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System/SFMLSystemDependencies.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-build/src/SFML/System/install_local_manifest.txt"
+  file(WRITE "/home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

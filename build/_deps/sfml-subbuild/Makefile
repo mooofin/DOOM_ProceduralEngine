@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /nix/store/xsmnansgqyw46gkxvxv5vx477i13lvgf-cmake-3.31.6/bin/cmake
+CMAKE_COMMAND = /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake
 
 # The command to remove a file.
-RM = /nix/store/xsmnansgqyw46gkxvxv5vx477i13lvgf-cmake-3.31.6/bin/cmake -E rm -f
+RM = /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-subbuild
+CMAKE_SOURCE_DIR = /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-subbuild
+CMAKE_BINARY_DIR = /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	/nix/store/xsmnansgqyw46gkxvxv5vx477i13lvgf-cmake-3.31.6/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/nix/store/xsmnansgqyw46gkxvxv5vx477i13lvgf-cmake-3.31.6/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,16 +87,16 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-subbuild/CMakeFiles /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-subbuild//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/CMakeFiles /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-subbuild/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/CMakeFiles 0
 .PHONY : all
 
 # The main codegen target
 codegen: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-subbuild/CMakeFiles /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-subbuild//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/CMakeFiles /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codegen
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-subbuild/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/CMakeFiles 0
 .PHONY : codegen
 
 # The main clean target

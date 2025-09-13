@@ -4,7 +4,7 @@
 # compile CXX with /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++
 CXX_DEFINES = -DSFML_STATIC -DSTBI_FAILURE_USERMSG
 
-CXX_INCLUDES = -I/home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/src -isystem /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include -isystem /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/extlibs/headers/stb_image -isystem /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/extlibs/headers/glad/include -isystem /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2
+CXX_INCLUDES = -I/home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src -isystem /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include -isystem /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/extlibs/headers/stb_image -isystem /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/extlibs/headers/glad/include -isystem /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2
 
 CXX_FLAGS = -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
 

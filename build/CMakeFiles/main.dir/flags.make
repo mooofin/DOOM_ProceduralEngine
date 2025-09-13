@@ -4,7 +4,7 @@
 # compile CXX with /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++
 CXX_DEFINES = -DSFML_STATIC
 
-CXX_INCLUDES = -isystem /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include
+CXX_INCLUDES = -isystem /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include
 
 CXX_FLAGS = 
 

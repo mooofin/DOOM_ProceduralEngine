@@ -1,15 +1,15 @@
 _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.o: \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/src/SFML/Graphics/Font.cpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Graphics/Font.cpp \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/stdc-predef.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Font.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Export.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Config.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Glyph.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Rect.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Vector2.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Export.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Angle.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Angle.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Font.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Export.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Config.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Glyph.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Rect.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Vector2.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Angle.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Angle.inl \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/cassert \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/c++config.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/os_defines.h \
@@ -24,7 +24,7 @@ _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.o: \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/x86_64-unknown-linux-gnu/bits/cpu_defines.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/pstl/pstl_config.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/assert.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Vector2.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Vector2.inl \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/optional \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/version.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/type_traits \
@@ -48,11 +48,11 @@ _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.o: \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/concept_check.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/debug/assertions.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/utility.h \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Rect.inl \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Texture.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/CoordinateType.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/GlResource.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Rect.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Texture.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/CoordinateType.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Window/GlResource.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/memory \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/memoryfwd.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/allocator.h \
@@ -269,21 +269,21 @@ _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.o: \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/stl_vector.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/stl_bvector.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/vector.tcc \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Image.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Color.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/Graphics/Color.inl \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Err.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/Exception.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/FileInputStream.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/InputStream.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/include/SFML/System/MemoryInputStream.hpp \
- /home/muffin/sid/projects/cmake-sfml-project/build/_deps/sfml-src/src/SFML/System/Utils.hpp \
- /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2/ft2build.h \
- /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2/freetype/config/ftheader.h \
- /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2/freetype/freetype.h \
- /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2/freetype/config/ftconfig.h \
- /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2/freetype/config/ftoption.h \
- /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2/freetype/config/ftstdlib.h \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Image.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Color.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/Graphics/Color.inl \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Err.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/Exception.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/FileInputStream.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/InputStream.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/include/SFML/System/MemoryInputStream.hpp \
+ /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Utils.hpp \
+ /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2/ft2build.h \
+ /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2/freetype/config/ftheader.h \
+ /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2/freetype/freetype.h \
+ /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2/freetype/config/ftconfig.h \
+ /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2/freetype/config/ftoption.h \
+ /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2/freetype/config/ftstdlib.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/lib/gcc/x86_64-unknown-linux-gnu/14.3.0/include/limits.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/lib/gcc/x86_64-unknown-linux-gnu/14.3.0/include/syslimits.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/limits.h \
@@ -300,20 +300,20 @@ _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.o: \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/stdlib.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/setjmp.h \
  /nix/store/m3n0h7646c7qwf6dbvdqhslmxmv2dg3z-glibc-2.40-66-dev/include/bits/setjmp2.h \
- /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2/freetype/config/integer-types.h \
- /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2/freetype/config/public-macros.h \
- /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2/freetype/config/mac-support.h \
- /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2/freetype/fttypes.h \
- /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2/freetype/ftsystem.h \
- /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2/freetype/ftimage.h \
- /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2/freetype/fterrors.h \
- /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2/freetype/ftmoderr.h \
- /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2/freetype/fterrdef.h \
- /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2/freetype/ftglyph.h \
- /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2/freetype/ftoutln.h \
- /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2/freetype/ftbitmap.h \
- /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2/freetype/ftcolor.h \
- /nix/store/aqmn22k52ha5c2y17r5dwsl8lmg3sqqv-freetype-2.13.3-dev/include/freetype2/freetype/ftstroke.h \
+ /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2/freetype/config/integer-types.h \
+ /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2/freetype/config/public-macros.h \
+ /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2/freetype/config/mac-support.h \
+ /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2/freetype/fttypes.h \
+ /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2/freetype/ftsystem.h \
+ /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2/freetype/ftimage.h \
+ /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2/freetype/fterrors.h \
+ /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2/freetype/ftmoderr.h \
+ /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2/freetype/fterrdef.h \
+ /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2/freetype/ftglyph.h \
+ /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2/freetype/ftoutln.h \
+ /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2/freetype/ftbitmap.h \
+ /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2/freetype/ftcolor.h \
+ /nix/store/z8y1lakm1vmmi19h5h1iz1p108vh0za2-freetype-2.13.3-dev/include/freetype2/freetype/ftstroke.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/utility \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/bits/stl_relops.h \
  /nix/store/8adzgnxs3s0pbj22qhk9zjxi1fqmz3xv-gcc-14.3.0/include/c++/14.3.0/cmath \
