@@ -9,7 +9,7 @@ This project was developed to serve as a practical demonstration of procedural g
 entity management within a game context.
 
 <img width="1920" height="1080" alt="screenshot-1757774764" src="https://github.com/user-attachments/assets/66e6d72f-1829-4b7d-9a53-42dd617e522f" />
----
+
 
 ## Table of Contents
 
