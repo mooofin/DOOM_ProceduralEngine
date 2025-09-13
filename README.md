@@ -1,101 +1,175 @@
-# CMake SFML Project Template
+# 2D Procedural Adventure
 
-This repository template should allow for a fast and hassle-free kick start of your next SFML project using CMake.
-Thanks to [GitHub's nature of templates](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template), you can fork this repository without inheriting its Git history.
+Welcome to Procedural Adventure! This is a simple yet powerful 2D top-down shooter built from the ground up in C++ and SFML. The game features an infinitely replayable world, dynamic enemies, and a complete game loop, all built on fundamental data structures and algorithms.
 
-The template starts out very basic, but might receive additional features over time:
+<img width="1200" height="676" alt="image" src="https://github.com/user-attachments/assets/5e2a82a2-f9a4-4f8b-b053-8c586ca75c84" />
 
-- Basic CMake script to build your project and link SFML on any operating system
-- Basic [GitHub Actions](https://github.com/features/actions) script for all major platforms
 
-## How to Use
+This project was developed to serve as a practical demonstration of procedural generation and real-time 
+entity management within a game context.
 
-1. Install [Git](https://git-scm.com/downloads) and [CMake](https://cmake.org/download/). Use your system's package manager if available.
-2. Follow [GitHub's instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) for how to use their project template feature to create your own project. If you don't want to use GitHub, see the section below.
-3. Clone your new GitHub repo and open the repo in your text editor of choice.
-4. Open [CMakeLists.txt](CMakeLists.txt). Rename the project and the target name of the executable to whatever name you want. Make sure to change all occurrences.
-5. If you want to add or remove any .cpp files, change the source files listed in the `add_executable` call in CMakeLists.txt to match the source files your project requires. If you plan on keeping the default main.cpp file then no changes are required.
-6. If your code uses the Audio or Network modules then add `SFML::Audio` or `SFML::Network` to the `target_link_libraries` call alongside the existing `SFML::Graphics` library that is being linked.
-7. If you use Linux, install SFML's dependencies using your system package manager. On Ubuntu and other Debian-based distributions you can use the following commands:
-   ```
-   sudo apt update
-   sudo apt install \
-       libxrandr-dev \
-       libxcursor-dev \
-       libxi-dev \
-       libudev-dev \
-       libfreetype-dev \
-       libflac-dev \
-       libvorbis-dev \
-       libgl1-mesa-dev \
-       libegl1-mesa-dev \
-       libfreetype-dev
-   ```
-8. Configure and build your project. Most popular IDEs support CMake projects with very little effort on your part.
+<img width="1920" height="1080" alt="screenshot-1757774764" src="https://github.com/user-attachments/assets/66e6d72f-1829-4b7d-9a53-42dd617e522f" />
+---
 
-   - [VS Code](https://code.visualstudio.com) via the [CMake extension](https://code.visualstudio.com/docs/cpp/cmake-linux)
-   - [Visual Studio](https://docs.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170)
-   - [CLion](https://www.jetbrains.com/clion/features/cmake-support.html)
-   - [Qt Creator](https://doc.qt.io/qtcreator/creator-project-cmake.html)
+## Table of Contents
 
-   Using CMake from the command line is straightforward as well.
-   Be sure to run these commands in the root directory of the project you just created.
+1.  [Key Features](#key-features)
+2.  [How it Works: A Technical Deep Dive](#how-it-works-a-technical-deep-dive)
+    - [The Core: Data Structures & Algorithms](#the-core-data-structures--algorithms)
+    - [World Generation: Cellular Automata](#world-generation-cellular-automata)
+    - [Rendering Pipeline: The Art of Spritesheets](#rendering-pipeline-the-art-of-spritesheets)
+3.  [Setting Up Your System](#setting-up-your-system)
+    - [Prerequisites](#prerequisites)
+    - [Asset Setup (The Most Important Step!)](#asset-setup-the-most-important-step)
+    - [Build Instructions (Using Nix)](#build-instructions-using-nix)
+4.  [How to Play](#how-to-play)
+    - [Objective](#objective)
+    - [Controls](#controls)
+5.  [Code Structure Overview](#code-structure-overview)
 
-   ```
-   cmake -B build
-   cmake --build build
-   ```
+## Key Features
 
-9. Enjoy!
+-   **Explore Infinite Worlds:** Every time you play, a brand new map is generated using a Cellular Automata algorithm, creating organic, cave-like environments.
+-   **Dynamic Combat:** Fight against an ever-growing horde of enemies that spawn over time and hunt you down.
+-   **Sprite-Based Visuals:** The game uses classic, Zelda-themed sprites for the player, enemies, and the world itself, all rendered from spritesheets.
+-   **Player Progression:** A simple health and scoring system tracks your performance.
+-   **Full Game Loop:** Features a "Playing" state and a "Game Over" screen that displays your final score.
+-   **Atmospheric Audio:** A looping background music track sets the mood for adventure.
 
-## Upgrading SFML
+## How it Works: A Technical Deep Dive
 
-SFML is found via CMake's [FetchContent](https://cmake.org/cmake/help/latest/module/FetchContent.html) module.
-FetchContent automatically downloads SFML from GitHub and builds it alongside your own code.
-Beyond the convenience of not having to install SFML yourself, this ensures ABI compatibility and simplifies things like specifying static versus shared libraries.
+This project might be in a single file, but it's built on several key computer science concepts.
 
-Modifying what version of SFML you want is as easy as changing the `GIT_TAG` argument.
-Currently it uses SFML 3 via the `3.0.0` tag.
+### The Core: Data Structures & Algorithms
 
-## But I want to...
+This game is a direct application of fundamental data structures.
 
-Modify CMake options by adding them as configuration parameters (with a `-D` flag) or by modifying the contents of CMakeCache.txt and rebuilding.
+-   **The World Grid (`std::vector<std::vector<TileType>>`):** The entire game world is represented by a 2D matrix (a vector of vectors). This is a highly efficient data structure for grid-based worlds because it gives us constant-time `O(1)` access to any tile's data just by using its `[y][x]` coordinates. This is essential for fast rendering and collision checks.
 
-### Not use GitHub
+-   **Dynamic Entity Management (`std::vector<Enemy>` and `std::vector<Bullet>`):** We don't know how many enemies or bullets will be on screen at any given moment. An `std::vector` is the perfect choice here. It's a dynamic array that can grow as new enemies spawn and shrink as they are defeated.
 
-You can use this project without a GitHub account by [downloading the contents](https://github.com/SFML/cmake-sfml-project/archive/refs/heads/master.zip) of the repository as a ZIP archive and unpacking it locally.
-This approach also avoids using Git entirely if you would prefer to not do that.
+-   **The Erase-Remove Idiom (`std::remove_if`):** To efficiently remove "dead" enemies or bullets that have hit a wall, the code uses the standard C++ algorithm `std::remove_if`. This algorithm iterates through the vector, moves all the "dead" elements to the end in a single pass (`O(n)` complexity), and then the `vector::erase` method cleans them up. This is far more performant than finding and erasing elements one by one.
 
-### Change Compilers
+### World Generation: Cellular Automata
 
-See the variety of [`CMAKE_<LANG>_COMPILER`](https://cmake.org/cmake/help/latest/variable/CMAKE_LANG_COMPILER.html) options.
-In particular you'll want to modify `CMAKE_CXX_COMPILER` to point to the C++ compiler you wish to use.
+To create natural-looking caves instead of rigid corridors, the world is generated using a Cellular Automata algorithm. This is a fascinating process that mimics natural patterns.
 
-### Change Compiler Optimizations
+1.  **Random Noise:** First, the world grid is filled with a random pattern of "Trees" (walls) and "Grass" (floors). This looks like static on a TV screen.
+2.  **Simulation/Smoothing:** The algorithm then runs through several simulation steps. In each step, every single tile looks at its 8 immediate neighbors and follows a simple rule:
+    -   "If I am a tree and have 4 or more tree neighbors, I stay a tree."
+    -   "If I am a floor and have 5 or more tree neighbors, I become a tree."
+    -   Otherwise, I become a floor.
+    This process naturally carves out large, open caverns and smooths out the initial noise into a playable map.
 
-CMake abstracts away specific optimizer flags through the [`CMAKE_BUILD_TYPE`](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html) option.
-By default this project recommends `Release` builds which enable optimizations.
-Other build types include `Debug` builds which enable debug symbols but disable optimizations.
-If you're using a multi-configuration generator (as is often the case on Windows), you can modify the [`CMAKE_CONFIGURATION_TYPES`](https://cmake.org/cmake/help/latest/variable/CMAKE_CONFIGURATION_TYPES.html#variable:CMAKE_CONFIGURATION_TYPES) option.
+### Rendering Pipeline: The Art of Spritesheets
 
-### Change Generators
+The game's visuals are not just colored squares; they are individual images "cut out" from larger spritesheet files.
 
-While CMake will attempt to pick a suitable default generator, some systems offer a number of generators to choose from.
-Ubuntu, for example, offers Makefiles and Ninja as two potential options.
-For a list of generators, click [here](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html).
-To modify the generator you're using you must reconfigure your project providing a `-G` flag with a value corresponding to the generator you want.
-You can't simply modify an entry in the CMakeCache.txt file unlike the above options.
-Then you may rebuild your project with this new generator.
+-   **`sf::IntRect`:** A simple struct holding four integers (`left`, `top`, `width`, `height`) that defines a rectangular area on a texture. We define one of these for each tile type we want to draw (e.g., `grassRect`, `treesRect`).
+-   **`sprite.setTextureRect(rect)`:** This is the magic function. Before drawing a sprite, we tell it which `IntRect` to use. This instructs the GPU to only render the small portion of the spritesheet defined by our rectangle, effectively letting us "cut out" the specific tile we need.
+-   **The Camera (`sf::View`):** The game world is much larger than the window. To handle this, we use a `sf::View`, which acts as a 2D camera. Every frame, we center this view on the player's position. When we tell SFML to draw using this view, it automatically handles drawing the correct part of the world, giving the illusion of a smooth-scrolling camera.
 
-## More Reading
+## Setting Up Your System
 
-Here are some useful resources if you want to learn more about CMake:
+Follow these steps to get the game running on your machine.
 
-- [Official CMake Tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/)
-- [How to Use CMake Without the Agonizing Pain - Part 1](https://alexreinking.com/blog/how-to-use-cmake-without-the-agonizing-pain-part-1.html)
-- [How to Use CMake Without the Agonizing Pain - Part 2](https://alexreinking.com/blog/how-to-use-cmake-without-the-agonizing-pain-part-2.html)
-- [Better CMake YouTube series by Jefferon Amstutz](https://www.youtube.com/playlist?list=PL8i3OhJb4FNV10aIZ8oF0AA46HgA2ed8g)
+### Prerequisites
 
-## License
+-   A C++17 compliant compiler (GCC, Clang, etc.).
+-   **CMake** (version 3.10+).
+-   **Git**.
+-   **Nix:** The project is configured to be built within a Nix shell, which manages all dependencies.
 
-The source code is dual licensed under Public Domain and MIT -- choose whichever you prefer.
+### Asset Setup (The Most Important Step!)
+
+The game will crash if it cannot find the required assets. You must create the following folder structure in the root of your project and place your files inside. **The filenames and paths must be exact.**
+
+```
+/YourProjectRoot/
+    ├── src/
+    │   └── main.cpp
+    ├── CMakeLists.txt
+    └── res/
+        ├── arial.ttf           <-- A font file for the score
+        ├── textures/
+        │   ├── character.png   <-- Your player spritesheet
+        │   ├── npc.png         <-- Your enemy spritesheet
+        │   └── world.png       <-- Your tilesheet for the map
+        └── sfx/
+            └── music.ogg       <-- Your background music
+```
+
+### Build Instructions (Using Nix)
+
+1.  **Clone the repository** (or ensure you are in the project's root directory).
+
+2.  **Review the `shell.nix` file.** It provides the Nix environment with all the necessary libraries to compile and run the game. It should contain at least:
+    ```nix
+    # shell.nix
+    { pkgs ? import <nixpkgs> {} }:
+
+    pkgs.mkShell {
+      buildInputs = [
+        pkgs.cmake
+        pkgs.sfml
+        pkgs.openalSoft # Runtime dependency for SFML Audio
+        # Any other X11 libs you might have needed
+      ];
+    }
+    ```
+
+3.  **Enter the Nix Shell.** From your project's root directory, run:
+    ```bash
+    nix-shell
+    ```
+    Your terminal prompt will change, indicating you are now in the specialized environment.
+
+4.  **Create and navigate to the build directory.** This keeps our compiled files separate from our source code.
+    ```bash
+    mkdir build
+    cd build
+    ```
+
+5.  **Run CMake.** This command reads your `CMakeLists.txt` file and generates the `Makefile` needed for compilation.
+    ```bash
+    cmake ..
+    ```
+
+6.  **Compile the code.** Now, simply run `make`. This will compile your `main.cpp` and link it against the SFML libraries. The custom command in our CMake file will also automatically copy your `res` folder into this `build` directory.
+    ```bash
+    make
+    ```
+
+7.  **Run the game!** The final executable is placed in the `bin` folder.
+    ```bash
+    ./bin/main
+    ```
+
+## How to Play
+
+### Objective
+
+You are dropped into a procedurally generated world filled with hostile clones of yourself. Survive for as long as you can by defeating enemies to increase your score. The game ends when your health runs out.
+
+### Controls
+
+| Key           | Action          |
+| :------------ | :-------------- |
+| **W, A, S, D** or **Arrow Keys** | Move Character  |
+| **Spacebar**    | Shoot           |
+| **Enter** (Hold)| Sprint / Run Faster |
+
+## Code Structure Overview
+
+For simplicity, the entire game logic resides in `main.cpp`. It is organized in the following way:
+
+-   **Global Structs & Enums:** `GameState`, `TileType`, `Player`, `Enemy`, and `Bullet` are defined at the top to structure all our game data.
+-   **Helper Function Prototypes:** Signatures for our world generation functions.
+-   **`main()` function:**
+    -   **Setup:** Initializes the window, loads all assets (textures, sounds, fonts), and sets up spritesheet coordinates.
+    -   **Game State & UI:** Defines all the variables for the game state, UI text, and the `resetGame` lambda function.
+    -   **Game Loop:** The main `while (window.isOpen())` loop runs the game.
+        -   **Event Handling:** Checks for window closing and other events.
+        -   **Game Logic (`if (gameState == GameState::Playing)`):** All gameplay—player input, enemy spawning, AI, updates, and collision—happens inside this block.
+        -   **Drawing:** The last part of the loop, responsible for clearing the screen and drawing the world and UI.
+-   **Helper Function Implementations:** The full C++ code for `findValidSpawn`, `generateWorld`, and `countTreeNeighbors` is at the very bottom of the file.
