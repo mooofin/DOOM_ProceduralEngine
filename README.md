@@ -11,33 +11,22 @@ This project was developed to serve as a practical demonstration of procedural g
 
 ## Table of Contents
 
-1.  [Key Features](#key-features)
-2.  [How it Works: A Technical Deep Dive](#how-it-works-a-technical-deep-dive)
+
+1.  [How it Works: A Technical Deep Dive](#how-it-works-a-technical-deep-dive)
     - [The Core: Data Structures & Algorithms](#the-core-data-structures--algorithms)
     - [World Generation: Cellular Automata](#world-generation-cellular-automata)
     - [Infinite World System](#infinite-world-system)
     - [Parallax Loading Screen](#parallax-loading-screen)
     - [Rendering Pipeline: The Art of Spritesheets](#rendering-pipeline-the-art-of-spritesheets)
-3.  [Setting Up Your System](#setting-up-your-system)
-    - [Prerequisites](#prerequisites)
+2.   - [Prerequisites](#prerequisites)
     - [Asset Setup (The Most Important Step!)](#asset-setup-the-most-important-step)
     - [Build Instructions (Using Nix)](#build-instructions-using-nix)
-4.  [How to Play](#how-to-play)
+3.  [How to Play](#how-to-play)
     - [Objective](#objective)
     - [Controls](#controls)
-5.  [Code Structure Overview](#code-structure-overview)
+4.  [Code Structure Overview](#code-structure-overview)
 
-## Key Features
 
--   **🏔️ Cinematic Loading Screen:** Experience a beautiful mountain parallax loading screen with 5 layers of scrolling backgrounds that create depth and atmosphere.
--   **🌍 Truly Infinite Worlds:** Explore seamlessly wrapped worlds that never end - no more green background at the edges! The world tiles infinitely in all directions.
--   **🎲 Procedural Generation:** Every time you play, a brand new 200x200 tile map is generated using enhanced Cellular Automata algorithms, creating organic, natural environments.
--   **⚔️ Dynamic Combat:** Fight against an ever-growing horde of enemies that spawn over time and hunt you down with intelligent AI.
--   **🎨 Sprite-Based Visuals:** The game uses classic, Zelda-themed sprites for the player, enemies, and the world itself, all rendered from spritesheets.
--   **💧 Environmental Variety:** Discover grass, trees, and water features that create diverse, interesting landscapes.
--   **📊 Player Progression:** A comprehensive health and scoring system tracks your performance and survival time.
--   **🎮 Complete Game Loop:** Features Loading, Playing, and Game Over states with smooth transitions.
--   **🎵 Atmospheric Audio:** A looping background music track sets the mood for adventure.
 
 ## How it Works: A Technical Deep Dive
 
