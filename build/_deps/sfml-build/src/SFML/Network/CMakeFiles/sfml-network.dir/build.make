@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake
+CMAKE_COMMAND = /nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake
 
 # The command to remove a file.
-RM = /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E rm -f
+RM = /nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -76,141 +76,141 @@ _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Ftp.cpp.o: _deps/s
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Ftp.cpp.o: _deps/sfml-src/src/SFML/Network/Ftp.cpp
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Ftp.cpp.o: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Ftp.cpp.o"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Ftp.cpp.o -MF CMakeFiles/sfml-network.dir/Ftp.cpp.o.d -o CMakeFiles/sfml-network.dir/Ftp.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Ftp.cpp
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Ftp.cpp.o -MF CMakeFiles/sfml-network.dir/Ftp.cpp.o.d -o CMakeFiles/sfml-network.dir/Ftp.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Ftp.cpp
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Ftp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml-network.dir/Ftp.cpp.i"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Ftp.cpp > CMakeFiles/sfml-network.dir/Ftp.cpp.i
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Ftp.cpp > CMakeFiles/sfml-network.dir/Ftp.cpp.i
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Ftp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml-network.dir/Ftp.cpp.s"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Ftp.cpp -o CMakeFiles/sfml-network.dir/Ftp.cpp.s
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Ftp.cpp -o CMakeFiles/sfml-network.dir/Ftp.cpp.s
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Http.cpp.o: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/flags.make
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Http.cpp.o: _deps/sfml-src/src/SFML/Network/Http.cpp
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Http.cpp.o: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Http.cpp.o"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Http.cpp.o -MF CMakeFiles/sfml-network.dir/Http.cpp.o.d -o CMakeFiles/sfml-network.dir/Http.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Http.cpp
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Http.cpp.o -MF CMakeFiles/sfml-network.dir/Http.cpp.o.d -o CMakeFiles/sfml-network.dir/Http.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Http.cpp
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Http.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml-network.dir/Http.cpp.i"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Http.cpp > CMakeFiles/sfml-network.dir/Http.cpp.i
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Http.cpp > CMakeFiles/sfml-network.dir/Http.cpp.i
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Http.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml-network.dir/Http.cpp.s"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Http.cpp -o CMakeFiles/sfml-network.dir/Http.cpp.s
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Http.cpp -o CMakeFiles/sfml-network.dir/Http.cpp.s
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/IpAddress.cpp.o: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/flags.make
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/IpAddress.cpp.o: _deps/sfml-src/src/SFML/Network/IpAddress.cpp
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/IpAddress.cpp.o: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/IpAddress.cpp.o"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/IpAddress.cpp.o -MF CMakeFiles/sfml-network.dir/IpAddress.cpp.o.d -o CMakeFiles/sfml-network.dir/IpAddress.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/IpAddress.cpp
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/IpAddress.cpp.o -MF CMakeFiles/sfml-network.dir/IpAddress.cpp.o.d -o CMakeFiles/sfml-network.dir/IpAddress.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/IpAddress.cpp
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/IpAddress.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml-network.dir/IpAddress.cpp.i"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/IpAddress.cpp > CMakeFiles/sfml-network.dir/IpAddress.cpp.i
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/IpAddress.cpp > CMakeFiles/sfml-network.dir/IpAddress.cpp.i
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/IpAddress.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml-network.dir/IpAddress.cpp.s"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/IpAddress.cpp -o CMakeFiles/sfml-network.dir/IpAddress.cpp.s
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/IpAddress.cpp -o CMakeFiles/sfml-network.dir/IpAddress.cpp.s
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Packet.cpp.o: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/flags.make
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Packet.cpp.o: _deps/sfml-src/src/SFML/Network/Packet.cpp
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Packet.cpp.o: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Packet.cpp.o"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Packet.cpp.o -MF CMakeFiles/sfml-network.dir/Packet.cpp.o.d -o CMakeFiles/sfml-network.dir/Packet.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Packet.cpp
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Packet.cpp.o -MF CMakeFiles/sfml-network.dir/Packet.cpp.o.d -o CMakeFiles/sfml-network.dir/Packet.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Packet.cpp
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Packet.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml-network.dir/Packet.cpp.i"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Packet.cpp > CMakeFiles/sfml-network.dir/Packet.cpp.i
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Packet.cpp > CMakeFiles/sfml-network.dir/Packet.cpp.i
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Packet.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml-network.dir/Packet.cpp.s"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Packet.cpp -o CMakeFiles/sfml-network.dir/Packet.cpp.s
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Packet.cpp -o CMakeFiles/sfml-network.dir/Packet.cpp.s
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Socket.cpp.o: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/flags.make
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Socket.cpp.o: _deps/sfml-src/src/SFML/Network/Socket.cpp
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Socket.cpp.o: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Socket.cpp.o"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Socket.cpp.o -MF CMakeFiles/sfml-network.dir/Socket.cpp.o.d -o CMakeFiles/sfml-network.dir/Socket.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Socket.cpp
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Socket.cpp.o -MF CMakeFiles/sfml-network.dir/Socket.cpp.o.d -o CMakeFiles/sfml-network.dir/Socket.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Socket.cpp
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Socket.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml-network.dir/Socket.cpp.i"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Socket.cpp > CMakeFiles/sfml-network.dir/Socket.cpp.i
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Socket.cpp > CMakeFiles/sfml-network.dir/Socket.cpp.i
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Socket.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml-network.dir/Socket.cpp.s"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Socket.cpp -o CMakeFiles/sfml-network.dir/Socket.cpp.s
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Socket.cpp -o CMakeFiles/sfml-network.dir/Socket.cpp.s
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/SocketSelector.cpp.o: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/flags.make
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/SocketSelector.cpp.o: _deps/sfml-src/src/SFML/Network/SocketSelector.cpp
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/SocketSelector.cpp.o: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/SocketSelector.cpp.o"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/SocketSelector.cpp.o -MF CMakeFiles/sfml-network.dir/SocketSelector.cpp.o.d -o CMakeFiles/sfml-network.dir/SocketSelector.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/SocketSelector.cpp
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/SocketSelector.cpp.o -MF CMakeFiles/sfml-network.dir/SocketSelector.cpp.o.d -o CMakeFiles/sfml-network.dir/SocketSelector.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/SocketSelector.cpp
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/SocketSelector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml-network.dir/SocketSelector.cpp.i"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/SocketSelector.cpp > CMakeFiles/sfml-network.dir/SocketSelector.cpp.i
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/SocketSelector.cpp > CMakeFiles/sfml-network.dir/SocketSelector.cpp.i
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/SocketSelector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml-network.dir/SocketSelector.cpp.s"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/SocketSelector.cpp -o CMakeFiles/sfml-network.dir/SocketSelector.cpp.s
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/SocketSelector.cpp -o CMakeFiles/sfml-network.dir/SocketSelector.cpp.s
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpListener.cpp.o: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/flags.make
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpListener.cpp.o: _deps/sfml-src/src/SFML/Network/TcpListener.cpp
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpListener.cpp.o: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpListener.cpp.o"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpListener.cpp.o -MF CMakeFiles/sfml-network.dir/TcpListener.cpp.o.d -o CMakeFiles/sfml-network.dir/TcpListener.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/TcpListener.cpp
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpListener.cpp.o -MF CMakeFiles/sfml-network.dir/TcpListener.cpp.o.d -o CMakeFiles/sfml-network.dir/TcpListener.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/TcpListener.cpp
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpListener.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml-network.dir/TcpListener.cpp.i"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/TcpListener.cpp > CMakeFiles/sfml-network.dir/TcpListener.cpp.i
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/TcpListener.cpp > CMakeFiles/sfml-network.dir/TcpListener.cpp.i
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpListener.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml-network.dir/TcpListener.cpp.s"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/TcpListener.cpp -o CMakeFiles/sfml-network.dir/TcpListener.cpp.s
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/TcpListener.cpp -o CMakeFiles/sfml-network.dir/TcpListener.cpp.s
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpSocket.cpp.o: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/flags.make
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpSocket.cpp.o: _deps/sfml-src/src/SFML/Network/TcpSocket.cpp
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpSocket.cpp.o: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpSocket.cpp.o"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpSocket.cpp.o -MF CMakeFiles/sfml-network.dir/TcpSocket.cpp.o.d -o CMakeFiles/sfml-network.dir/TcpSocket.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/TcpSocket.cpp
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpSocket.cpp.o -MF CMakeFiles/sfml-network.dir/TcpSocket.cpp.o.d -o CMakeFiles/sfml-network.dir/TcpSocket.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/TcpSocket.cpp
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpSocket.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml-network.dir/TcpSocket.cpp.i"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/TcpSocket.cpp > CMakeFiles/sfml-network.dir/TcpSocket.cpp.i
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/TcpSocket.cpp > CMakeFiles/sfml-network.dir/TcpSocket.cpp.i
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpSocket.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml-network.dir/TcpSocket.cpp.s"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/TcpSocket.cpp -o CMakeFiles/sfml-network.dir/TcpSocket.cpp.s
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/TcpSocket.cpp -o CMakeFiles/sfml-network.dir/TcpSocket.cpp.s
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/UdpSocket.cpp.o: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/flags.make
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/UdpSocket.cpp.o: _deps/sfml-src/src/SFML/Network/UdpSocket.cpp
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/UdpSocket.cpp.o: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/UdpSocket.cpp.o"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/UdpSocket.cpp.o -MF CMakeFiles/sfml-network.dir/UdpSocket.cpp.o.d -o CMakeFiles/sfml-network.dir/UdpSocket.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/UdpSocket.cpp
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/UdpSocket.cpp.o -MF CMakeFiles/sfml-network.dir/UdpSocket.cpp.o.d -o CMakeFiles/sfml-network.dir/UdpSocket.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/UdpSocket.cpp
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/UdpSocket.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml-network.dir/UdpSocket.cpp.i"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/UdpSocket.cpp > CMakeFiles/sfml-network.dir/UdpSocket.cpp.i
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/UdpSocket.cpp > CMakeFiles/sfml-network.dir/UdpSocket.cpp.i
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/UdpSocket.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml-network.dir/UdpSocket.cpp.s"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/UdpSocket.cpp -o CMakeFiles/sfml-network.dir/UdpSocket.cpp.s
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/UdpSocket.cpp -o CMakeFiles/sfml-network.dir/UdpSocket.cpp.s
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.o: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/flags.make
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.o: _deps/sfml-src/src/SFML/Network/Unix/SocketImpl.cpp
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.o: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.o"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.o -MF CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.o.d -o CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Unix/SocketImpl.cpp
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.o -MF CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.o.d -o CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Unix/SocketImpl.cpp
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.i"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Unix/SocketImpl.cpp > CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.i
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Unix/SocketImpl.cpp > CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.i
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.s"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Unix/SocketImpl.cpp -o CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.s
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/Network && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/Network/Unix/SocketImpl.cpp -o CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.s
 
 # Object files for target sfml-network
 sfml__network_OBJECTS = \

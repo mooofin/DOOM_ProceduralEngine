@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake
+CMAKE_COMMAND = /nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake
 
 # The command to remove a file.
-RM = /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E rm -f
+RM = /nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -76,15 +76,15 @@ CMakeFiles/main.dir/src/main.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/main.cpp.o: /home/muffin/sid/projects/DOOM_ProceduralEngine/src/main.cpp
 CMakeFiles/main.dir/src/main.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/src/main.cpp.o"
-	/nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/main.cpp.o -MF CMakeFiles/main.dir/src/main.cpp.o.d -o CMakeFiles/main.dir/src/main.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/src/main.cpp
+	/nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/main.cpp.o -MF CMakeFiles/main.dir/src/main.cpp.o.d -o CMakeFiles/main.dir/src/main.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/src/main.cpp
 
 CMakeFiles/main.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/main.cpp.i"
-	/nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/src/main.cpp > CMakeFiles/main.dir/src/main.cpp.i
+	/nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/src/main.cpp > CMakeFiles/main.dir/src/main.cpp.i
 
 CMakeFiles/main.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/main.cpp.s"
-	/nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/src/main.cpp -o CMakeFiles/main.dir/src/main.cpp.s
+	/nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/src/main.cpp -o CMakeFiles/main.dir/src/main.cpp.s
 
 # Object files for target main
 main_OBJECTS = \
@@ -99,26 +99,26 @@ bin/main: CMakeFiles/main.dir/compiler_depend.ts
 bin/main: _deps/sfml-build/lib/libsfml-graphics.a
 bin/main: _deps/sfml-build/lib/libsfml-audio.a
 bin/main: _deps/sfml-build/lib/libsfml-window.a
-bin/main: /nix/store/gvg4ibdx82jfy1alrh21pki3waxnfd88-libXrandr-1.5.4/lib/libXrandr.so
-bin/main: /nix/store/hkn7b9rdqky4m43mhk3pg1ind85yf8fv-libXcursor-1.2.3/lib/libXcursor.so
-bin/main: /nix/store/8k4dpzfffy5iwviwxip9922spnxarf7j-libXrender-0.9.12/lib/libXrender.so
-bin/main: /nix/store/k5y6wvpry8iivp71c70ldw3c6fnp9jk5-libXfixes-6.0.1/lib/libXfixes.so
-bin/main: /nix/store/phpmbvcjd7sppnbfg07g5v9xyjna9nbi-libXi-1.8.2/lib/libXi.so
-bin/main: /nix/store/2lbv5rbgfwh2gn7n6pzb01p5y4vc683z-libXext-1.3.6/lib/libXext.so
-bin/main: /nix/store/ayswhp8g569mhb0gbgxrvqw53hsq59mz-libX11-1.8.12/lib/libX11.so
-bin/main: /nix/store/45hwsgjwa6nxxb5rzz2kl68g3ikfprm6-libglvnd-1.7.0/lib/libGL.so
-bin/main: /nix/store/h21vrfz24qvbb7s33nc5z6asckw4g6fa-systemd-minimal-libs-257.8/lib/libudev.so
-bin/main: /nix/store/xx31k2jyp067bgjf22377w6i3nlvsiil-freetype-2.13.3/lib/libfreetype.so
+bin/main: /nix/store/y3f8qyplqlr2dq45brdllmfbmq72881k-libxrandr-1.5.4/lib/libXrandr.so
+bin/main: /nix/store/wh144m9n9l6x0ymkijrschjnxdbfvmmc-libxcursor-1.2.3/lib/libXcursor.so
+bin/main: /nix/store/z91n482d5j83vwahjbp7ynrsz2hka8js-libxrender-0.9.12/lib/libXrender.so
+bin/main: /nix/store/wh2rk89l24k7gaqyi75qjjj6m874gikr-libxfixes-6.0.1/lib/libXfixes.so
+bin/main: /nix/store/w8q26h5dvhy79fxcsj31iw11sdf09hs6-libXi-1.8.2/lib/libXi.so
+bin/main: /nix/store/vqviqi56cf6wri18bscgxgx45lwb6mgc-libxext-1.3.6/lib/libXext.so
+bin/main: /nix/store/wfna2fx4023769504rjzgn0mz0m6bc0c-libx11-1.8.12/lib/libX11.so
+bin/main: /nix/store/pgxicv9xgn7y4wlamnlwzh2frlcfi2f5-libglvnd-1.7.0/lib/libGL.so
+bin/main: /nix/store/8lxn5385zrbgamkn3gs0gih2lwgcz91g-systemd-minimal-libs-257.8/lib/libudev.so
+bin/main: /nix/store/95gvjj2dq0fn7x95zppnkpbril4djmnn-freetype-2.13.3/lib/libfreetype.so
 bin/main: _deps/sfml-build/lib/libsfml-system.a
-bin/main: /nix/store/0rs3q68c7hv7flzlfg2j8qb1kkk4wjjw-libvorbis-1.3.7/lib/libvorbisfile.so
-bin/main: /nix/store/0rs3q68c7hv7flzlfg2j8qb1kkk4wjjw-libvorbis-1.3.7/lib/libvorbisenc.so
-bin/main: /nix/store/0rs3q68c7hv7flzlfg2j8qb1kkk4wjjw-libvorbis-1.3.7/lib/libvorbis.so
-bin/main: /nix/store/s3sjfjkhrypipz7xix4gkav1hahryczk-libogg-1.3.5/lib/libogg.so
-bin/main: /nix/store/yrl327grqf0010vmwh333hi4ly928js8-flac-1.5.0/lib/libFLAC.so
+bin/main: /nix/store/ahvcxdckb5w22kzh40wmn5kcb3gbdv79-libvorbis-1.3.7/lib/libvorbisfile.so
+bin/main: /nix/store/ahvcxdckb5w22kzh40wmn5kcb3gbdv79-libvorbis-1.3.7/lib/libvorbisenc.so
+bin/main: /nix/store/ahvcxdckb5w22kzh40wmn5kcb3gbdv79-libvorbis-1.3.7/lib/libvorbis.so
+bin/main: /nix/store/nixnvas033myv1iafb4r15h3547c3q0l-libogg-1.3.6/lib/libogg.so
+bin/main: /nix/store/20idlzn0vam7ql7c7dj5fzb3c74glsar-flac-1.5.0/lib/libFLAC.so
 bin/main: CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable bin/main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
-	/nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E copy_directory /home/muffin/sid/projects/DOOM_ProceduralEngine/res /home/muffin/sid/projects/DOOM_ProceduralEngine/build/res
+	/nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -E copy_directory /home/muffin/sid/projects/DOOM_ProceduralEngine/res /home/muffin/sid/projects/DOOM_ProceduralEngine/build/res
 
 # Rule to build all files generated by this target.
 CMakeFiles/main.dir/build: bin/main

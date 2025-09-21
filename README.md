@@ -1,12 +1,10 @@
 # 2D Procedural Adventure
 
-Welcome to Procedural Adventure! This is a simple yet powerful 2D top-down shooter built from the ground up in C++ and SFML. The game features an infinitely replayable world, dynamic enemies, and a complete game loop, all built on fundamental data structures and algorithms.
+Welcome to Procedural Adventure! This is a simple yet powerful 2D top-down shooter built from the ground up in C++ and SFML. The game features an infinitely replayable world, dynamic enemies, a cinematic loading screen, and a complete game loop, all built on fundamental data structures and algorithms.
 
 <img width="1200" height="676" alt="image" src="https://github.com/user-attachments/assets/5e2a82a2-f9a4-4f8b-b053-8c586ca75c84" />
 
-
-This project was developed to serve as a practical demonstration of procedural generation and real-time 
-entity management within a game context.
+This project was developed to serve as a practical demonstration of procedural generation, real-time entity management, and advanced graphics techniques within a game context.
 
 <img width="1920" height="1080" alt="screenshot-1757774764" src="https://github.com/user-attachments/assets/66e6d72f-1829-4b7d-9a53-42dd617e522f" />
 
@@ -17,6 +15,8 @@ entity management within a game context.
 2.  [How it Works: A Technical Deep Dive](#how-it-works-a-technical-deep-dive)
     - [The Core: Data Structures & Algorithms](#the-core-data-structures--algorithms)
     - [World Generation: Cellular Automata](#world-generation-cellular-automata)
+    - [Infinite World System](#infinite-world-system)
+    - [Parallax Loading Screen](#parallax-loading-screen)
     - [Rendering Pipeline: The Art of Spritesheets](#rendering-pipeline-the-art-of-spritesheets)
 3.  [Setting Up Your System](#setting-up-your-system)
     - [Prerequisites](#prerequisites)
@@ -29,12 +29,15 @@ entity management within a game context.
 
 ## Key Features
 
--   **Explore Infinite Worlds:** Every time you play, a brand new map is generated using a Cellular Automata algorithm, creating organic, cave-like environments.
--   **Dynamic Combat:** Fight against an ever-growing horde of enemies that spawn over time and hunt you down.
--   **Sprite-Based Visuals:** The game uses classic, Zelda-themed sprites for the player, enemies, and the world itself, all rendered from spritesheets.
--   **Player Progression:** A simple health and scoring system tracks your performance.
--   **Full Game Loop:** Features a "Playing" state and a "Game Over" screen that displays your final score.
--   **Atmospheric Audio:** A looping background music track sets the mood for adventure.
+-   **🏔️ Cinematic Loading Screen:** Experience a beautiful mountain parallax loading screen with 5 layers of scrolling backgrounds that create depth and atmosphere.
+-   **🌍 Truly Infinite Worlds:** Explore seamlessly wrapped worlds that never end - no more green background at the edges! The world tiles infinitely in all directions.
+-   **🎲 Procedural Generation:** Every time you play, a brand new 200x200 tile map is generated using enhanced Cellular Automata algorithms, creating organic, natural environments.
+-   **⚔️ Dynamic Combat:** Fight against an ever-growing horde of enemies that spawn over time and hunt you down with intelligent AI.
+-   **🎨 Sprite-Based Visuals:** The game uses classic, Zelda-themed sprites for the player, enemies, and the world itself, all rendered from spritesheets.
+-   **💧 Environmental Variety:** Discover grass, trees, and water features that create diverse, interesting landscapes.
+-   **📊 Player Progression:** A comprehensive health and scoring system tracks your performance and survival time.
+-   **🎮 Complete Game Loop:** Features Loading, Playing, and Game Over states with smooth transitions.
+-   **🎵 Atmospheric Audio:** A looping background music track sets the mood for adventure.
 
 ## How it Works: A Technical Deep Dive
 
@@ -60,6 +63,24 @@ To create natural-looking caves instead of rigid corridors, the world is generat
     -   "If I am a floor and have 5 or more tree neighbors, I become a tree."
     -   Otherwise, I become a floor.
     This process naturally carves out large, open caverns and smooths out the initial noise into a playable map.
+
+### Infinite World System
+
+The game features a truly infinite world that never shows the background color, creating a seamless exploration experience.
+
+-   **Coordinate Wrapping:** Using modulo operations (`((x % WORLD_WIDTH) + WORLD_WIDTH) % WORLD_WIDTH`), the game wraps coordinates so that when you reach the edge of the 200x200 world, you seamlessly appear on the opposite side.
+-   **Seamless Rendering:** The rendering system draws extra tiles around the visible area and wraps their coordinates, ensuring smooth transitions as you move across world boundaries.
+-   **Collision System Integration:** All collision detection (bullets, enemies, player movement) works with wrapped coordinates, so gameplay remains consistent across world boundaries.
+-   **Performance Optimization:** Only visible tiles are rendered, maintaining 60 FPS even with the larger world size.
+
+### Parallax Loading Screen
+
+The game features a cinematic loading screen that demonstrates advanced graphics techniques.
+
+-   **Multi-Layer Parallax:** Five mountain layers scroll at different speeds (0.1x to 0.8x) creating a convincing sense of depth and movement.
+-   **Seamless Scrolling:** Each layer uses multiple sprite copies to create infinite horizontal scrolling without visible seams.
+-   **Smooth Transitions:** The loading screen includes fade-in effects for text elements and smooth progress indication.
+-   **Asset Management:** All mountain textures are loaded and optimized with proper scaling and positioning.
 
 ### Rendering Pipeline: The Art of Spritesheets
 
@@ -94,10 +115,17 @@ The game will crash if it cannot find the required assets. You must create the f
         ├── textures/
         │   ├── character.png   <-- Your player spritesheet
         │   ├── npc.png         <-- Your enemy spritesheet
-        │   └── world.png       <-- Your tilesheet for the map
+        │   ├── world.png       <-- Your tilesheet for the map
+        │   ├── parallax-mountain-bg.png                    <-- Loading screen background
+        │   ├── parallax-mountain-montain-far.png          <-- Far mountain layer
+        │   ├── parallax-mountain-mountains.png            <-- Mid mountain layer
+        │   ├── parallax-mountain-trees.png                <-- Tree layer
+        │   └── parallax-mountain-foreground-trees.png     <-- Foreground layer
         └── sfx/
             └── music.ogg       <-- Your background music
 ```
+
+**Note:** The mountain textures are used for the parallax loading screen. You can find free parallax mountain assets online, or create your own layered mountain backgrounds. The game expects these specific filenames for the loading screen to work properly.
 
 ### Build Instructions (Using Nix)
 
@@ -163,13 +191,23 @@ You are dropped into a procedurally generated world filled with hostile clones o
 
 For simplicity, the entire game logic resides in `main.cpp`. It is organized in the following way:
 
--   **Global Structs & Enums:** `GameState`, `TileType`, `Player`, `Enemy`, and `Bullet` are defined at the top to structure all our game data.
--   **Helper Function Prototypes:** Signatures for our world generation functions.
+-   **Global Structs & Enums:** `GameState` (Loading, Playing, GameOver), `TileType` (Grass, Trees, Water), `Player`, `Enemy`, `Bullet`, and `ParallaxLayer` are defined at the top to structure all our game data.
+-   **Helper Function Prototypes:** Signatures for our world generation and utility functions.
 -   **`main()` function:**
     -   **Setup:** Initializes the window, loads all assets (textures, sounds, fonts), and sets up spritesheet coordinates.
+    -   **Loading Screen Setup:** Creates parallax layers, loading screen UI elements, and initializes the loading state.
     -   **Game State & UI:** Defines all the variables for the game state, UI text, and the `resetGame` lambda function.
     -   **Game Loop:** The main `while (window.isOpen())` loop runs the game.
         -   **Event Handling:** Checks for window closing and other events.
+        -   **Loading Screen Logic (`if (gameState == GameState::Loading)`):** Handles parallax scrolling, progress updates, and transition to gameplay.
         -   **Game Logic (`if (gameState == GameState::Playing)`):** All gameplay—player input, enemy spawning, AI, updates, and collision—happens inside this block.
-        -   **Drawing:** The last part of the loop, responsible for clearing the screen and drawing the world and UI.
+        -   **Drawing:** The last part of the loop, responsible for clearing the screen and drawing either the loading screen or the game world and UI.
 -   **Helper Function Implementations:** The full C++ code for `findValidSpawn`, `generateWorld`, and `countTreeNeighbors` is at the very bottom of the file.
+
+### Key Technical Features
+
+-   **Infinite World Rendering:** Uses modulo operations to wrap coordinates and create seamless world boundaries.
+-   **Parallax Scrolling:** Implements multi-layer scrolling with different speeds for depth perception.
+-   **State Management:** Clean separation between Loading, Playing, and Game Over states.
+-   **Memory Management:** Efficient use of `std::vector` for dynamic entity management with the erase-remove idiom.
+-   **Performance Optimization:** Only renders visible tiles and uses efficient collision detection algorithms.

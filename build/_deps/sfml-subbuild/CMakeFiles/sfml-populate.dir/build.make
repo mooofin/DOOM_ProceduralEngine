@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake
+CMAKE_COMMAND = /nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake
 
 # The command to remove a file.
-RM = /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E rm -f
+RM = /nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -78,59 +78,59 @@ CMakeFiles/sfml-populate-complete: sfml-populate-prefix/src/sfml-populate-stamp/
 CMakeFiles/sfml-populate-complete: sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install
 CMakeFiles/sfml-populate-complete: sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'sfml-populate'"
-	/nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E make_directory /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/CMakeFiles
-	/nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E touch /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/CMakeFiles/sfml-populate-complete
-	/nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E touch /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done
+	/nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -E make_directory /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/CMakeFiles
+	/nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -E touch /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/CMakeFiles/sfml-populate-complete
+	/nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -E touch /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done
 
 sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update:
 .PHONY : sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update
 
 sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build: sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'sfml-populate'"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build && /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E echo_append
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build && /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E touch /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build && /nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -E echo_append
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build && /nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -E touch /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build
 
 sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure: sfml-populate-prefix/tmp/sfml-populate-cfgcmd.txt
 sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure: sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'sfml-populate'"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build && /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E echo_append
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build && /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E touch /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build && /nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -E echo_append
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build && /nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -E touch /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure
 
 sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download: sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-gitinfo.txt
 sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download: sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'sfml-populate'"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps && /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitclone.cmake
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps && /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E touch /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps && /nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitclone.cmake
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps && /nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -E touch /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download
 
 sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install: sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'sfml-populate'"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build && /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E echo_append
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build && /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E touch /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build && /nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -E echo_append
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build && /nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -E touch /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install
 
 sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'sfml-populate'"
-	/nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -Dcfgdir= -P /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-mkdirs.cmake
-	/nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E touch /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir
+	/nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -Dcfgdir= -P /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-mkdirs.cmake
+	/nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -E touch /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir
 
 sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch: sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch-info.txt
 sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch: sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'sfml-populate'"
-	/nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E echo_append
-	/nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E touch /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch
+	/nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -E echo_append
+	/nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -E touch /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch
 
 sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update:
 .PHONY : sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update
 
 sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test: sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'sfml-populate'"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build && /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E echo_append
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build && /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E touch /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build && /nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -E echo_append
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build && /nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -E touch /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test
 
 sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update: sfml-populate-prefix/tmp/sfml-populate-gitupdate.cmake
 sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update: sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update-info.txt
 sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update: sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'sfml-populate'"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src && /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitupdate.cmake
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src && /nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitupdate.cmake
 
 CMakeFiles/sfml-populate.dir/codegen:
 .PHONY : CMakeFiles/sfml-populate.dir/codegen

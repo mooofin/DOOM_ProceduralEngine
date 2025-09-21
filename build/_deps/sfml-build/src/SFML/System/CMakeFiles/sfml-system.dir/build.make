@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake
+CMAKE_COMMAND = /nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake
 
 # The command to remove a file.
-RM = /nix/store/fxpx9xaw1p55zk1jyri15w9zlb0s3g6z-cmake-3.31.6/bin/cmake -E rm -f
+RM = /nix/store/a94d5zmalqava26y3hqsnj5l11l5kl5y-cmake-3.31.7/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -76,141 +76,141 @@ _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.o: _deps/s
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.o: _deps/sfml-src/src/SFML/System/Clock.cpp
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.o: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.o"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.o -MF CMakeFiles/sfml-system.dir/Clock.cpp.o.d -o CMakeFiles/sfml-system.dir/Clock.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Clock.cpp
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.o -MF CMakeFiles/sfml-system.dir/Clock.cpp.o.d -o CMakeFiles/sfml-system.dir/Clock.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Clock.cpp
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/Clock.cpp.i"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Clock.cpp > CMakeFiles/sfml-system.dir/Clock.cpp.i
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Clock.cpp > CMakeFiles/sfml-system.dir/Clock.cpp.i
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/Clock.cpp.s"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Clock.cpp -o CMakeFiles/sfml-system.dir/Clock.cpp.s
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Clock.cpp -o CMakeFiles/sfml-system.dir/Clock.cpp.s
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.o: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.o: _deps/sfml-src/src/SFML/System/Err.cpp
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.o: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.o"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.o -MF CMakeFiles/sfml-system.dir/Err.cpp.o.d -o CMakeFiles/sfml-system.dir/Err.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Err.cpp
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.o -MF CMakeFiles/sfml-system.dir/Err.cpp.o.d -o CMakeFiles/sfml-system.dir/Err.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Err.cpp
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/Err.cpp.i"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Err.cpp > CMakeFiles/sfml-system.dir/Err.cpp.i
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Err.cpp > CMakeFiles/sfml-system.dir/Err.cpp.i
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/Err.cpp.s"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Err.cpp -o CMakeFiles/sfml-system.dir/Err.cpp.s
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Err.cpp -o CMakeFiles/sfml-system.dir/Err.cpp.s
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.o: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.o: _deps/sfml-src/src/SFML/System/Sleep.cpp
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.o: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.o"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.o -MF CMakeFiles/sfml-system.dir/Sleep.cpp.o.d -o CMakeFiles/sfml-system.dir/Sleep.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Sleep.cpp
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.o -MF CMakeFiles/sfml-system.dir/Sleep.cpp.o.d -o CMakeFiles/sfml-system.dir/Sleep.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Sleep.cpp
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/Sleep.cpp.i"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Sleep.cpp > CMakeFiles/sfml-system.dir/Sleep.cpp.i
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Sleep.cpp > CMakeFiles/sfml-system.dir/Sleep.cpp.i
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/Sleep.cpp.s"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Sleep.cpp -o CMakeFiles/sfml-system.dir/Sleep.cpp.s
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Sleep.cpp -o CMakeFiles/sfml-system.dir/Sleep.cpp.s
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o: _deps/sfml-src/src/SFML/System/String.cpp
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o -MF CMakeFiles/sfml-system.dir/String.cpp.o.d -o CMakeFiles/sfml-system.dir/String.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/String.cpp
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.o -MF CMakeFiles/sfml-system.dir/String.cpp.o.d -o CMakeFiles/sfml-system.dir/String.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/String.cpp
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/String.cpp.i"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/String.cpp > CMakeFiles/sfml-system.dir/String.cpp.i
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/String.cpp > CMakeFiles/sfml-system.dir/String.cpp.i
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/String.cpp.s"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/String.cpp -o CMakeFiles/sfml-system.dir/String.cpp.s
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/String.cpp -o CMakeFiles/sfml-system.dir/String.cpp.s
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Utils.cpp.o: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Utils.cpp.o: _deps/sfml-src/src/SFML/System/Utils.cpp
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Utils.cpp.o: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Utils.cpp.o"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Utils.cpp.o -MF CMakeFiles/sfml-system.dir/Utils.cpp.o.d -o CMakeFiles/sfml-system.dir/Utils.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Utils.cpp
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Utils.cpp.o -MF CMakeFiles/sfml-system.dir/Utils.cpp.o.d -o CMakeFiles/sfml-system.dir/Utils.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Utils.cpp
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/Utils.cpp.i"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Utils.cpp > CMakeFiles/sfml-system.dir/Utils.cpp.i
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Utils.cpp > CMakeFiles/sfml-system.dir/Utils.cpp.i
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/Utils.cpp.s"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Utils.cpp -o CMakeFiles/sfml-system.dir/Utils.cpp.s
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Utils.cpp -o CMakeFiles/sfml-system.dir/Utils.cpp.s
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vector2.cpp.o: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vector2.cpp.o: _deps/sfml-src/src/SFML/System/Vector2.cpp
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vector2.cpp.o: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vector2.cpp.o"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vector2.cpp.o -MF CMakeFiles/sfml-system.dir/Vector2.cpp.o.d -o CMakeFiles/sfml-system.dir/Vector2.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Vector2.cpp
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vector2.cpp.o -MF CMakeFiles/sfml-system.dir/Vector2.cpp.o.d -o CMakeFiles/sfml-system.dir/Vector2.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Vector2.cpp
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vector2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/Vector2.cpp.i"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Vector2.cpp > CMakeFiles/sfml-system.dir/Vector2.cpp.i
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Vector2.cpp > CMakeFiles/sfml-system.dir/Vector2.cpp.i
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vector2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/Vector2.cpp.s"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Vector2.cpp -o CMakeFiles/sfml-system.dir/Vector2.cpp.s
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Vector2.cpp -o CMakeFiles/sfml-system.dir/Vector2.cpp.s
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vector3.cpp.o: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vector3.cpp.o: _deps/sfml-src/src/SFML/System/Vector3.cpp
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vector3.cpp.o: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vector3.cpp.o"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vector3.cpp.o -MF CMakeFiles/sfml-system.dir/Vector3.cpp.o.d -o CMakeFiles/sfml-system.dir/Vector3.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Vector3.cpp
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vector3.cpp.o -MF CMakeFiles/sfml-system.dir/Vector3.cpp.o.d -o CMakeFiles/sfml-system.dir/Vector3.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Vector3.cpp
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vector3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/Vector3.cpp.i"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Vector3.cpp > CMakeFiles/sfml-system.dir/Vector3.cpp.i
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Vector3.cpp > CMakeFiles/sfml-system.dir/Vector3.cpp.i
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vector3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/Vector3.cpp.s"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Vector3.cpp -o CMakeFiles/sfml-system.dir/Vector3.cpp.s
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Vector3.cpp -o CMakeFiles/sfml-system.dir/Vector3.cpp.s
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.o: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.o: _deps/sfml-src/src/SFML/System/FileInputStream.cpp
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.o: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.o"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.o -MF CMakeFiles/sfml-system.dir/FileInputStream.cpp.o.d -o CMakeFiles/sfml-system.dir/FileInputStream.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/FileInputStream.cpp
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.o -MF CMakeFiles/sfml-system.dir/FileInputStream.cpp.o.d -o CMakeFiles/sfml-system.dir/FileInputStream.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/FileInputStream.cpp
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/FileInputStream.cpp.i"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/FileInputStream.cpp > CMakeFiles/sfml-system.dir/FileInputStream.cpp.i
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/FileInputStream.cpp > CMakeFiles/sfml-system.dir/FileInputStream.cpp.i
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/FileInputStream.cpp.s"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/FileInputStream.cpp -o CMakeFiles/sfml-system.dir/FileInputStream.cpp.s
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/FileInputStream.cpp -o CMakeFiles/sfml-system.dir/FileInputStream.cpp.s
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o: _deps/sfml-src/src/SFML/System/MemoryInputStream.cpp
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o -MF CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o.d -o CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/MemoryInputStream.cpp
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o -MF CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o.d -o CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/MemoryInputStream.cpp
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.i"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/MemoryInputStream.cpp > CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.i
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/MemoryInputStream.cpp > CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.i
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.s"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/MemoryInputStream.cpp -o CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.s
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/MemoryInputStream.cpp -o CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.s
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/flags.make
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o: _deps/sfml-src/src/SFML/System/Unix/SleepImpl.cpp
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o: _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/muffin/sid/projects/DOOM_ProceduralEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o -MF CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o.d -o CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Unix/SleepImpl.cpp
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o -MF CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o.d -o CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o -c /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Unix/SleepImpl.cpp
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.i"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Unix/SleepImpl.cpp > CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.i
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Unix/SleepImpl.cpp > CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.i
 
 _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.s"
-	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/kaj8d1zcn149m40s9h0xi0khakibiphz-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Unix/SleepImpl.cpp -o CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.s
+	cd /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-build/src/SFML/System && /nix/store/95k9rsn1zsw1yvir8mj824ldhf90i4qw-gcc-wrapper-14.3.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/muffin/sid/projects/DOOM_ProceduralEngine/build/_deps/sfml-src/src/SFML/System/Unix/SleepImpl.cpp -o CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.s
 
 # Object files for target sfml-system
 sfml__system_OBJECTS = \
