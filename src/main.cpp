@@ -9,11 +9,11 @@
 #include <string>
 #include <iostream>
 
-// --- Game State & Entity Enums ---
+//gaeme entity states (call them back again)
 enum class GameState { Loading, Playing, GameOver };
 enum class TileType { Grass, Trees, Water };
 
-// --- Game Object Structs ---
+//player data for all the actions (no enemy logic here )
 struct Player {
     sf::Sprite sprite;
     sf::Vector2f velocity;
@@ -35,14 +35,14 @@ struct Enemy {
     Enemy(const sf::Texture& texture) : sprite(texture) {}
 };
 
-// --- Loading Screen Structs ---
+//loading screen data's 
 struct ParallaxLayer {
     sf::Sprite sprite;
     float scrollSpeed;
     float offset;
     
     ParallaxLayer(const sf::Texture& texture, float speed) : sprite(texture), scrollSpeed(speed), offset(0.0f) {
-        sprite.setScale({2.0f, 2.0f}); // Scale up for better visual effect
+        sprite.setScale({2.0f, 2.0f}); 
     }
 };
 
@@ -52,7 +52,7 @@ void generateWorld(int, int, std::vector<std::vector<TileType>>&);
 int countTreeNeighbors(int, int, int, int, const std::vector<std::vector<TileType>>&);
 
 int main() {
-    // --- Window and World Setup ---
+    //make sfml draw the window (add more options ig?)
     const unsigned int WINDOW_WIDTH = 1280;
     const unsigned int WINDOW_HEIGHT = 720;
     const int WORLD_WIDTH = 200;
@@ -63,14 +63,14 @@ int main() {
     sf::RenderWindow window(sf::VideoMode({WINDOW_WIDTH, WINDOW_HEIGHT}), "Procedural Adventure");
     window.setFramerateLimit(60);
 
-    // --- Asset Loading ---
+    
     sf::Font font;
     if (!font.openFromFile("res/arial.ttf")) { std::cerr << "Could not load font\n"; return -1; }
-    sf::Texture playerTexture, overworldTexture; // REMOVED: enemyTexture
+    sf::Texture playerTexture, overworldTexture; 
     if (!playerTexture.loadFromFile("res/textures/character.png")) { std::cerr << "Could not load character.png\n"; return -1; }
     if (!overworldTexture.loadFromFile("res/textures/world.png")) { std::cerr << "Could not load world.png\n"; return -1; }
     
-    // --- Loading Screen Textures ---
+    // the mountain for bg 
     sf::Texture mountainBg, mountainFar, mountainMid, mountainTrees, mountainForeground;
     if (!mountainBg.loadFromFile("res/textures/parallax-mountain-bg.png")) { std::cerr << "Could not load mountain background\n"; return -1; }
     if (!mountainFar.loadFromFile("res/textures/parallax-mountain-montain-far.png")) { std::cerr << "Could not load mountain far\n"; return -1; }
@@ -97,7 +97,7 @@ int main() {
     if (!music.openFromFile("res/sfx/music.ogg")) { std::cerr << "Could not load music.ogg\n"; return -1; }
     music.setVolume(50);
     
-    // --- Loading Screen Setup ---
+    //loader for the L screen 
     std::vector<ParallaxLayer> parallaxLayers;
     parallaxLayers.emplace_back(mountainBg, 0.1f);        // Background - slowest
     parallaxLayers.emplace_back(mountainFar, 0.2f);       // Far mountains
@@ -113,13 +113,13 @@ int main() {
     // Loading screen variables
     float loadingProgress = 0.0f;
     sf::Clock loadingClock;
-    const float loadingDuration = 3.0f; // 3 seconds loading time
+    const float loadingDuration = 3.0f; 
     GameState gameState = GameState::Loading;
     
-    // Using one frame definition for both player and enemy
+    // Use one frame definition for both player and enemy
     sf::IntRect playerFrameRect({64, 240}, {16, 24});
 
-    // --- Player Setup ---
+    // player data setup for drawing 
     Player player(playerTexture); 
     player.sprite.setTextureRect(playerFrameRect); 
     player.sprite.setScale({SPRITE_SCALE, SPRITE_SCALE});
@@ -127,7 +127,7 @@ int main() {
     float playerSpeed = 150.0f;
     const sf::Time invincibilityDuration = sf::seconds(1.0f);
     
-    // --- Game Objects ---
+    
     std::vector<Bullet> bullets;
     std::vector<Enemy> enemies;
     float bulletSpeed = 300.0f;
@@ -177,7 +177,7 @@ int main() {
     
     sf::View view(sf::FloatRect({0.f, 0.f}, {(float)WINDOW_WIDTH, (float)WINDOW_HEIGHT}));
 
-    // --- Main Game Loop ---
+    //game loop for drawing
     sf::Clock deltaClock;
     while (window.isOpen()) {
         float dt = deltaClock.restart().asSeconds();
@@ -188,13 +188,13 @@ int main() {
             }
         }
         
-        // --- Loading Screen Logic ---
+        
         if (gameState == GameState::Loading) {
             loadingProgress = std::min(1.0f, loadingClock.getElapsedTime().asSeconds() / loadingDuration);
             
-            // Update parallax scrolling
+            
             for (auto& layer : parallaxLayers) {
-                layer.offset += layer.scrollSpeed * dt * 30.0f; // Scale for visible movement
+                layer.offset += layer.scrollSpeed * dt * 30.0f; 
                 float layerWidth = layer.sprite.getGlobalBounds().size.x;
                 if (layer.offset >= layerWidth) {
                     layer.offset = 0.0f;
@@ -207,7 +207,7 @@ int main() {
             unsigned char alpha = static_cast<unsigned char>(fadeAlpha);
             loadingTitle.setFillColor(sf::Color(255, 255, 255, alpha));
             
-            // Transition to game when loading is complete
+            
             if (loadingProgress >= 1.0f) {
                 gameState = GameState::Playing;
                 resetGame();
@@ -218,8 +218,9 @@ int main() {
             music.play(); 
         }
 
+        //ALLLLL THE CONTROLSSSSS 
         if (gameState == GameState::Playing) {
-            // Player Input & Movement...
+            
             player.velocity = {0.f, 0.f};
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W)) player.velocity.y -= 1;
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S)) player.velocity.y += 1;
@@ -236,7 +237,7 @@ int main() {
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Enter)) { currentSpeed *= 2.0f; }
             player.sprite.move(moveDir * currentSpeed * dt);
             
-            // Player Shooting...
+            //kabbom shoot yall
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space) && shootClock.getElapsedTime() >= sf::seconds(0.5f)) {
                 Bullet newBullet;
                 newBullet.shape.setRadius(8.f);
@@ -248,7 +249,7 @@ int main() {
                 shootClock.restart();
             }
             
-            // Enemy Spawning
+            //enemy :3
             if (enemies.size() < maxEnemies && enemySpawnClock.getElapsedTime() >= enemySpawnCooldown) {
                 enemySpawnClock.restart();
                 
@@ -272,7 +273,7 @@ int main() {
             for (auto& bullet : bullets) bullet.shape.move(bullet.velocity * dt);
             bullets.erase(std::remove_if(bullets.begin(), bullets.end(), [&](Bullet& b) {
                 sf::Vector2i tileCoords((int)b.shape.getPosition().x / TILE_SIZE, (int)b.shape.getPosition().y / TILE_SIZE);
-                // Wrap coordinates for infinite world
+                
                 int wrappedX = ((tileCoords.x % WORLD_WIDTH) + WORLD_WIDTH) % WORLD_WIDTH;
                 int wrappedY = ((tileCoords.y % WORLD_HEIGHT) + WORLD_HEIGHT) % WORLD_HEIGHT;
                 if(grid[wrappedY][wrappedX] != TileType::Grass) return true;
@@ -329,7 +330,7 @@ int main() {
             healthBarFront.setSize({(float)player.health/100.f * 150.f, 15.f});
         }
 
-        // --- Drawing ---
+        
         window.clear(sf::Color(116, 182, 53));
         
         // --- Loading Screen Drawing ---
@@ -405,7 +406,10 @@ int main() {
     return 0;
 }
 
-// --- Function Implementations ---
+//  ALL THESE ARE THE MAIN DS FOCUSED FUNCTIONS 
+
+
+
 sf::Vector2f findValidSpawn(int worldWidth, int worldHeight, float tileSize, const std::vector<std::vector<TileType>>& grid){
     std::mt19937 rng(static_cast<unsigned int>(time(0)));
     while(true){
@@ -436,7 +440,23 @@ void generateWorld(int worldWidth, int worldHeight, std::vector<std::vector<Tile
         }
     }
     
-    // Apply cellular automata for natural clustering
+
+/*Cellular automata is used to create natural clusters of trees and grass.
+
+For 5 simulation steps:
+
+Count the number of neighboring tree tiles (countTreeNeighbors).
+
+If more than 4 neighbors are Trees → current tile becomes Trees.
+
+If fewer than 4 neighbors are Trees → current tile becomes Grass.
+
+This smooths the world and forms clusters instead of random noise 
+
+*/
+
+
+/* Cellular automata are grid-based simulations where each cell’s state (like grass, trees, or water) changes over time based on simple rules and the states of its neighbors*/
     int simulationSteps = 5;
     for (int i = 0; i < simulationSteps; ++i) {
         std::vector<std::vector<TileType>> nextGrid = grid;
@@ -450,7 +470,7 @@ void generateWorld(int worldWidth, int worldHeight, std::vector<std::vector<Tile
         grid = nextGrid;
     }
     
-    // Add some water features for variety
+   
     for (int y = 0; y < worldHeight; ++y) {
         for (int x = 0; x < worldWidth; ++x) {
             if (grid[y][x] == TileType::Grass) {
@@ -462,6 +482,9 @@ void generateWorld(int worldWidth, int worldHeight, std::vector<std::vector<Tile
         }
     }
 }
+
+
+/*Used to smooth the map and form realistic tree/grass clusters.*/
 int countTreeNeighbors(int x, int y, int width, int height, const std::vector<std::vector<TileType>>& grid) {
     int treeCount = 0;
     for (int ny = y - 1; ny <= y + 1; ++ny) {
