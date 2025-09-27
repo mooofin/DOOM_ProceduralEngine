@@ -100,18 +100,18 @@ The game will crash if it cannot find the required assets. You must create the f
     │   └── main.cpp
     ├── CMakeLists.txt
     └── res/
-        ├── arial.ttf           <-- A font file for the score
+        ├── arial.ttf           
         ├── textures/
-        │   ├── character.png   <-- Your player spritesheet
-        │   ├── npc.png         <-- Your enemy spritesheet
-        │   ├── world.png       <-- Your tilesheet for the map
-        │   ├── parallax-mountain-bg.png                    <-- Loading screen background
-        │   ├── parallax-mountain-montain-far.png          <-- Far mountain layer
-        │   ├── parallax-mountain-mountains.png            <-- Mid mountain layer
-        │   ├── parallax-mountain-trees.png                <-- Tree layer
-        │   └── parallax-mountain-foreground-trees.png     <-- Foreground layer
+        │   ├── character.png  
+        │   ├── npc.png         
+        │   ├── world.png       
+        │   ├── parallax-mountain-bg.png                   
+        │   ├── parallax-mountain-montain-far.png         
+        │   ├── parallax-mountain-mountains.png            
+        │   ├── parallax-mountain-trees.png               
+        │   └── parallax-mountain-foreground-trees.png     
         └── sfx/
-            └── music.ogg       <-- Your background music
+            └── music.ogg      
 ```
 
 **Note:** The mountain textures are used for the parallax loading screen. You can find free parallax mountain assets online, or create your own layered mountain backgrounds. The game expects these specific filenames for the loading screen to work properly.
