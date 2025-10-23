@@ -132,7 +132,7 @@ int main() {
         return -1;
     }
     music.setVolume(50);
-    music.setPlayingOffset(sf::Time::Zero);  // SFML 3.0 uses play() which loops by default
+    music.setLoop(true);
     
     // Generate dungeon
     std::vector<std::vector<TileType>> worldMap;
@@ -144,9 +144,6 @@ int main() {
         startX = MAP_WIDTH / 2;
         startY = MAP_HEIGHT / 2;
     }
-    
-    std::cout << "Player starting at: (" << startX << ", " << startY << ")\n";
-    std::cout << "Tile at start: " << (worldMap[startY][startX] == TileType::Empty ? "Empty" : "Wall") << "\n";
     
     // Initialize player
     Player player(startX + 0.5, startY + 0.5);
@@ -170,10 +167,10 @@ int main() {
     music.play();
     
     // Create image buffer for raycasting
-    sf::Image screenBuffer({SCREEN_WIDTH, SCREEN_HEIGHT}, sf::Color::Black);
+    sf::Image screenBuffer;
+    screenBuffer.create({SCREEN_WIDTH, SCREEN_HEIGHT}, sf::Color::Black);
     sf::Texture screenTexture;
-    screenTexture.loadFromImage(screenBuffer);
-    sf::Sprite screenSprite(screenTexture);
+    sf::Sprite screenSprite;
     
     // UI elements
     sf::Text healthText(font, "Health: 100", 24);
@@ -187,10 +184,6 @@ int main() {
     sf::Text ammoText(font, "Ammo: INF", 24);
     ammoText.setFillColor(sf::Color::White);
     ammoText.setPosition({10, 70});
-    
-    sf::Text debugText(font, "Debug", 20);
-    debugText.setFillColor(sf::Color::Cyan);
-    debugText.setPosition({10, SCREEN_HEIGHT - 30});
     
     sf::CircleShape crosshair(3);
     crosshair.setFillColor(sf::Color::Green);
@@ -453,7 +446,7 @@ int main() {
         }
         
         // === RAYCASTING RENDERING ===
-        screenBuffer = sf::Image({SCREEN_WIDTH, SCREEN_HEIGHT}, sf::Color(50, 50, 50)); // Floor color
+        screenBuffer.create({SCREEN_WIDTH, SCREEN_HEIGHT}, sf::Color(50, 50, 50)); // Floor color
         
         // Draw ceiling (top half)
         for (unsigned int y = 0; y < SCREEN_HEIGHT / 2; y++) {
@@ -536,9 +529,9 @@ int main() {
             
             // Apply distance fog
             double fogFactor = std::min(1.0, perpWallDist / 20.0);
-            color.r = (std::uint8_t)(color.r * (1.0 - fogFactor) + 50 * fogFactor);
-            color.g = (std::uint8_t)(color.g * (1.0 - fogFactor) + 50 * fogFactor);
-            color.b = (std::uint8_t)(color.b * (1.0 - fogFactor) + 50 * fogFactor);
+            color.r = (sf::Uint8)(color.r * (1.0 - fogFactor) + 50 * fogFactor);
+            color.g = (sf::Uint8)(color.g * (1.0 - fogFactor) + 50 * fogFactor);
+            color.b = (sf::Uint8)(color.b * (1.0 - fogFactor) + 50 * fogFactor);
             
             // Draw vertical line
             for (int y = drawStart; y < drawEnd; y++) {
@@ -631,9 +624,7 @@ int main() {
         }
         
         // Update texture and draw to window
-        if (!screenTexture.loadFromImage(screenBuffer)) {
-            std::cerr << "Failed to load screen buffer\n";
-        }
+        screenTexture.loadFromImage(screenBuffer);
         screenSprite.setTexture(screenTexture);
         
         window.clear();
@@ -642,13 +633,9 @@ int main() {
         // Draw HUD
         healthText.setString("Health: " + std::to_string(player.health));
         scoreText.setString("Score: " + std::to_string(score));
-        debugText.setString("Pos: (" + std::to_string((int)player.posX) + "," + std::to_string((int)player.posY) + 
-                           ") Dir: (" + std::to_string(player.dirX).substr(0, 4) + "," + std::to_string(player.dirY).substr(0, 4) + 
-                           ") FPS: " + std::to_string((int)(1.0f / deltaTime)));
         window.draw(healthText);
         window.draw(scoreText);
         window.draw(ammoText);
-        window.draw(debugText);
         window.draw(crosshair);
         
         window.display();
@@ -664,26 +651,15 @@ void generateDungeon(int width, int height, std::vector<std::vector<TileType>>& 
     
     std::mt19937 rng(static_cast<unsigned int>(time(0)));
     
-    struct Room {
-        int x, y, w, h;
-        int centerX() const { return x + w / 2; }
-        int centerY() const { return y + h / 2; }
-    };
-    
-    std::vector<Room> rooms;
-    
     // Create rooms
-    int numRooms = std::uniform_int_distribution<int>(20, 30)(rng);
+    int numRooms = std::uniform_int_distribution<int>(15, 25)(rng);
     
     for (int i = 0; i < numRooms; i++) {
-        int roomWidth = std::uniform_int_distribution<int>(6, 15)(rng);
-        int roomHeight = std::uniform_int_distribution<int>(6, 15)(rng);
-        int roomX = std::uniform_int_distribution<int>(2, width - roomWidth - 2)(rng);
-        int roomY = std::uniform_int_distribution<int>(2, height - roomHeight - 2)(rng);
+        int roomWidth = std::uniform_int_distribution<int>(4, 10)(rng);
+        int roomHeight = std::uniform_int_distribution<int>(4, 10)(rng);
+        int roomX = std::uniform_int_distribution<int>(1, width - roomWidth - 1)(rng);
+        int roomY = std::uniform_int_distribution<int>(1, height - roomHeight - 1)(rng);
         
-        rooms.push_back({roomX, roomY, roomWidth, roomHeight});
-        
-        // Carve out the room
         for (int y = roomY; y < roomY + roomHeight; y++) {
             for (int x = roomX; x < roomX + roomWidth; x++) {
                 map[y][x] = TileType::Empty;
@@ -691,42 +667,14 @@ void generateDungeon(int width, int height, std::vector<std::vector<TileType>>& 
         }
     }
     
-    // Create corridors connecting rooms
-    for (size_t i = 1; i < rooms.size(); i++) {
-        Room& prev = rooms[i - 1];
-        Room& curr = rooms[i];
-        
-        // Horizontal corridor
-        int startX = std::min(prev.centerX(), curr.centerX());
-        int endX = std::max(prev.centerX(), curr.centerX());
-        for (int x = startX; x <= endX; x++) {
-            map[prev.centerY()][x] = TileType::Empty;
-            // Make corridors wider
-            if (prev.centerY() > 0) map[prev.centerY() - 1][x] = TileType::Empty;
-            if (prev.centerY() < height - 1) map[prev.centerY() + 1][x] = TileType::Empty;
-        }
-        
-        // Vertical corridor
-        int startY = std::min(prev.centerY(), curr.centerY());
-        int endY = std::max(prev.centerY(), curr.centerY());
-        for (int y = startY; y <= endY; y++) {
-            map[y][curr.centerX()] = TileType::Empty;
-            // Make corridors wider
-            if (curr.centerX() > 0) map[y][curr.centerX() - 1] = TileType::Empty;
-            if (curr.centerX() < width - 1) map[y][curr.centerX() + 1] = TileType::Empty;
+    // Create corridors
+    for (int y = 1; y < height - 1; y++) {
+        for (int x = 1; x < width - 1; x++) {
+            if (std::uniform_int_distribution<int>(0, 100)(rng) < 5) {
+                map[y][x] = TileType::Empty;
+            }
         }
     }
-    
-    std::cout << "Generated " << rooms.size() << " rooms\n";
-    
-    // Count empty spaces for debug
-    int emptyCount = 0;
-    for (int y = 0; y < height; y++) {
-        for (int x = 0; x < width; x++) {
-            if (map[y][x] == TileType::Empty) emptyCount++;
-        }
-    }
-    std::cout << "Total empty tiles: " << emptyCount << " / " << (width * height) << "\n";
 }
 
 bool findEmptySpot(const std::vector<std::vector<TileType>>& map, int& x, int& y) {
